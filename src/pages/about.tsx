@@ -56,7 +56,7 @@ export default function About() {
             </div>
             <div className="relative">
               <Image
-                src="https://images.unsplash.com/photo-1599148400620-8e1ff0bf28d8?ixlib=rb-1.2.1&q=80&fm=jpg&w=800"
+                src="/images/hearts.jpeg"
                 alt="Echipa LIGHTIFY lucrând la semne neon"
                 width={600}
                 height={400}

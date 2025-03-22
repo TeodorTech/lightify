@@ -4,63 +4,70 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-black text-white">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-12 sm:py-16 lg:px-8">
-        <div className="mb-8 flex justify-center">
+      <div className="mx-auto max-w-7xl overflow-hidden px-6 py-8 sm:py-12 lg:px-8">
+        <div className="mb-6 sm:mb-8 flex justify-center">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">LIGHTIFY</span>
-            <h2 className="text-3xl font-bold tracking-tight text-pink-500">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-pink-500">
               LIGHT<span className="text-purple-500">IFY</span>
             </h2>
           </Link>
         </div>
-        <nav
-          className="mb-8 columns-2 sm:flex sm:justify-center sm:space-x-12"
-          aria-label="Footer"
-        >
-          <div className="pb-6">
-            <Link
-              href="/"
-              className="text-sm leading-6 text-gray-300 hover:text-white"
-            >
-              Acasă
-            </Link>
-          </div>
-          <div className="pb-6">
-            <Link
-              href="/why-choose-us"
-              className="text-sm leading-6 text-gray-300 hover:text-white"
-            >
-              De ce Lightify
-            </Link>
-          </div>
-          <div className="pb-6">
-            <Link
-              href="/portfolio"
-              className="text-sm leading-6 text-gray-300 hover:text-white"
-            >
-              Portofoliu
-            </Link>
-          </div>
-          <div className="pb-6">
-            <Link
-              href="/about"
-              className="text-sm leading-6 text-gray-300 hover:text-white"
-            >
-              Despre
-            </Link>
-          </div>
-          <div className="pb-6">
-            <Link
-              href="/contact"
-              className="text-sm leading-6 text-gray-300 hover:text-white"
-            >
-              Contact
-            </Link>
+
+        {/* Navigation Links */}
+        <nav className="mb-8" aria-label="Footer">
+          <div className="grid grid-cols-2 gap-4 sm:flex sm:justify-center sm:space-x-12">
+            <div className="text-center">
+              <Link
+                href="/"
+                className="text-sm leading-6 text-gray-300 hover:text-white"
+              >
+                Acasă
+              </Link>
+            </div>
+            <div className="text-center">
+              <Link
+                href="/why-choose-us"
+                className="text-sm leading-6 text-gray-300 hover:text-white"
+              >
+                De ce Lightify
+              </Link>
+            </div>
+            <div className="text-center">
+              <Link
+                href="/portfolio"
+                className="text-sm leading-6 text-gray-300 hover:text-white"
+              >
+                Portofoliu
+              </Link>
+            </div>
+            <div className="text-center">
+              <Link
+                href="/about"
+                className="text-sm leading-6 text-gray-300 hover:text-white"
+              >
+                Despre
+              </Link>
+            </div>
+            <div className="text-center col-span-2 mt-4 sm:mt-0">
+              <Link
+                href="/contact"
+                className="text-sm leading-6 text-gray-300 hover:text-white"
+              >
+                Contact
+              </Link>
+            </div>
           </div>
         </nav>
-        <div className="mt-8 border-t border-gray-900/10 pt-8 md:flex md:items-center md:justify-between">
-          <div className="flex space-x-6 md:order-2">
-            <Link href="#" className="text-gray-400 hover:text-gray-500">
+
+        {/* Bottom Section */}
+        <div className="mt-8 border-t border-gray-900/10 pt-8 flex flex-col md:flex-row md:items-center md:justify-between">
+          {/* Social Icons */}
+          <div className="flex justify-center space-x-6 md:order-2">
+            <Link
+              href="#"
+              className="text-gray-400 hover:text-pink-500 transition-colors"
+            >
               <span className="sr-only">Instagram</span>
               <svg
                 fill="currentColor"
@@ -75,7 +82,10 @@ export default function Footer() {
                 />
               </svg>
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-gray-500">
+            <Link
+              href="#"
+              className="text-gray-400 hover:text-pink-500 transition-colors"
+            >
               <span className="sr-only">Facebook</span>
               <svg
                 fill="currentColor"
@@ -91,7 +101,9 @@ export default function Footer() {
               </svg>
             </Link>
           </div>
-          <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
+
+          {/* Copyright */}
+          <p className="mt-6 text-xs leading-5 text-center text-gray-400 md:order-1 md:mt-0">
             &copy; {new Date().getFullYear()} LIGHTIFY. Toate drepturile
             rezervate.
           </p>

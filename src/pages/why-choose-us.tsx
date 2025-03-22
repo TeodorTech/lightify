@@ -223,7 +223,7 @@ export default function WhyChooseUs() {
             <div className="flex flex-col md:flex-row items-center gap-12 mt-16">
               <div className="relative w-full md:w-1/2">
                 <Image
-                  src="https://images.unsplash.com/photo-1549434079-935f4e1c5566?w=800&q=80"
+                  src="/images/maria18.jpeg"
                   alt="High quality neon sign manufacturing"
                   width={600}
                   height={400}

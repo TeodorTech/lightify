@@ -11,8 +11,7 @@ const portfolioItems = [
     description:
       "Semn neon personalizat pentru restaurantul 'The Bright Kitchen' cu logo-ul și culorile lor distinctive.",
     category: "afaceri",
-    imageUrl:
-      "https://images.unsplash.com/photo-1563656157432-67560b52174b?w=800&q=80",
+    imageUrl: "/images/balcan.jpg",
   },
   {
     id: 2,
@@ -20,8 +19,7 @@ const portfolioItems = [
     description:
       "Semn neon personalizat cu numele cuplului pentru fundalul recepției de nuntă.",
     category: "eveniment",
-    imageUrl:
-      "https://images.unsplash.com/photo-1594642445349-8422940b5481?w=800&q=80",
+    imageUrl: "/images/maria18.jpeg",
   },
   {
     id: 3,
@@ -29,8 +27,7 @@ const portfolioItems = [
     description:
       "Semn neon inspirațional pentru decor de casă cu un aspect modern.",
     category: "casă",
-    imageUrl:
-      "https://images.unsplash.com/photo-1557673834-5d48aff258eb?w=800&q=80",
+    imageUrl: "/images/diamente.jpg",
   },
   {
     id: 4,
@@ -38,8 +35,7 @@ const portfolioItems = [
     description:
       "Logo vibrant de ceașcă de cafea neon pentru cafeneaua 'Brew & Glow'.",
     category: "afaceri",
-    imageUrl:
-      "https://images.unsplash.com/photo-1590412638036-45207574f52a?w=800&q=80",
+    imageUrl: "/images/maneleMentolate.jpg",
   },
   {
     id: 5,
@@ -47,8 +43,7 @@ const portfolioItems = [
     description:
       "Semn neon personalizat 'La Mulți Ani' cu culori festive pentru decorarea evenimentelor.",
     category: "eveniment",
-    imageUrl:
-      "https://images.unsplash.com/photo-1608438304997-d4e54ffce405?w=800&q=80",
+    imageUrl: "/images/plushBday.jpg",
   },
   {
     id: 6,
@@ -56,8 +51,7 @@ const portfolioItems = [
     description:
       "Semn neon corporativ cu sloganul companiei pentru zona de recepție a biroului.",
     category: "afaceri",
-    imageUrl:
-      "https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?w=800&q=80",
+    imageUrl: "/images/hearts.jpeg",
   },
   {
     id: 7,
@@ -65,24 +59,21 @@ const portfolioItems = [
     description:
       "Semn neon personalizat 'Cocktails & Dreams' pentru amenajarea unui bar acasă.",
     category: "casă",
-    imageUrl:
-      "https://images.unsplash.com/photo-1514362829160-63cd9a53aad5?w=800&q=80",
+    imageUrl: "/images/maneleMentolate.jpg",
   },
   {
     id: 8,
     title: "Afișaj pentru Magazin",
     description: "Vitrina unui butic de modă cu semnalizare neon sezonieră.",
     category: "afaceri",
-    imageUrl:
-      "https://images.unsplash.com/photo-1582220874760-48d31c8b631a?w=800&q=80",
+    imageUrl: "/images/hearts.jpeg",
   },
   {
     id: 9,
     title: "Decorațiune pentru Camera Copiilor",
     description: "Design jucăuș de curcubeu neon pentru un dormitor de copii.",
     category: "casă",
-    imageUrl:
-      "https://images.unsplash.com/photo-1626544827763-d516dce335e2?w=800&q=80",
+    imageUrl: "/images/maria18.jpeg",
   },
 ];
 

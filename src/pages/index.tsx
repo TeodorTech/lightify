@@ -11,14 +11,18 @@ export default function Home() {
     >
       {/* Hero Section */}
       <section className="relative h-screen flex items-center">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="https://plus.unsplash.com/premium_photo-1681400783826-8ae188a981b7?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Fundal lumini neon"
-            fill
-            className="object-cover brightness-50"
-            priority
-          />
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <div className="h-full w-full relative">
+            <Image
+              src="/images/home2.jpg"
+              alt="Fundal lumini neon"
+              fill
+              className="object-cover brightness-40"
+              style={{ objectPosition: "center top" }}
+              priority
+            />
+            <div className="absolute inset-0 bg-black opacity-60"></div>
+          </div>
         </div>
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -72,10 +76,10 @@ export default function Home() {
                       <Image
                         src={
                           item === 1
-                            ? "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?w=600&h=400&q=80"
+                            ? "/images/plushBday.jpg"
                             : item === 2
-                            ? "https://images.unsplash.com/photo-1517242810446-cc8951b2be40?w=600&h=400&q=80"
-                            : "https://images.unsplash.com/photo-1558050032-160f36233a07?w=600&h=400&q=80"
+                            ? "/images/maneleMentolate.jpg"
+                            : "/images/balcan.jpg"
                         }
                         alt={`Semn neon reprezentativ ${item}`}
                         fill
@@ -86,12 +90,7 @@ export default function Home() {
                 </div>
                 <div className="max-w-xl">
                   <div className="mt-8 flex items-center gap-x-4 text-xs">
-                    <time dateTime="2023-03-16" className="text-gray-400">
-                      Proiect Recent
-                    </time>
-                    <span className="relative z-10 rounded-full bg-pink-600 px-3 py-1.5 font-medium text-white">
-                      {item === 1 ? "Afaceri" : item === 2 ? "Casă" : "Nuntă"}
-                    </span>
+                    {/* Time and category chip removed as requested */}
                   </div>
                   <div className="group relative">
                     <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
