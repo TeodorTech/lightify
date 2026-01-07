@@ -35,42 +35,51 @@ export default function Home() {
     >
       {/* Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/home2.jpg"
-            alt="Fundal lumini neon"
-            fill
-            className="object-cover brightness-[0.3]"
-            style={{ objectPosition: "center top" }}
-            priority
+        <div className="absolute inset-0 z-0 bg-black overflow-hidden">
+          {/* Primary Glows - Increased Visibility */}
+          <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-pink-500/30 rounded-full blur-[100px] animate-pulse" />
+          <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-purple-500/30 rounded-full blur-[100px] animate-pulse delay-1000" />
+          <div className="absolute top-[20%] right-[10%] w-[40%] h-[40%] bg-blue-500/20 rounded-full blur-[120px] animate-pulse delay-500" />
+
+          {/* Subtle Grid Overlay */}
+          <div
+            className="absolute inset-0 opacity-[0.05]"
+            style={{
+              backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`,
+              backgroundSize: '60px 60px'
+            }}
           />
-          {/* Ambient Glows */}
-          <div className="absolute top-1/4 -left-20 w-96 h-96 bg-pink-500/20 rounded-full blur-[120px] animate-pulse" />
-          <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-[120px] animate-pulse delay-700" />
+
+          {/* Radial Gradient for Focus */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.8)_100%)]" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-extrabold tracking-tighter text-white sm:text-6xl lg:text-8xl">
+        <div className="relative z-10 max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-pink-500/5 rounded-full blur-[120px] -z-10" />
+
+          <h1 className="text-6xl font-extrabold tracking-tighter text-white sm:text-7xl lg:text-9xl animate-in fade-in slide-in-from-top-4 duration-1000">
             Lumina care{" "}
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 text-glow-pink">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-glow-pink pb-2">
               Te Definește
             </span>
           </h1>
-          <p className="mt-8 max-w-lg mx-auto text-lg sm:text-xl text-gray-300 sm:max-w-2xl leading-relaxed">
-            Transformă-ți spațiul cu arta neon realizată manual. Calitate premium, design personalizat și o experiență de iluminare de neuitat.
+          <p className="mt-8 max-w-lg mx-auto text-lg sm:text-2xl text-gray-300 sm:max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
+            Arta neon realizată manual care dă viață spațiului tău. Calitate premium, design exclusiv și strălucire care durează.
           </p>
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
+          <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-8 animate-in fade-in zoom-in duration-1000 delay-500">
             <Link
               href="/portfolio"
-              className="w-full sm:w-auto px-8 py-4 bg-pink-500 text-white font-bold rounded-full hover:bg-pink-400 transition-all hover:shadow-neon-pink transform hover:-translate-y-1"
+              className="group relative px-10 py-5 bg-pink-600 text-white font-black rounded-full transition-all duration-300 hover:bg-pink-500 hover:shadow-[0_0_30px_rgba(236,72,153,0.6)] transform hover:-translate-y-1 active:scale-95 overflow-hidden"
             >
-              Explorează Portofoliul
+              <span className="relative z-10">EXPLOREAZĂ PORTOFOLIUL</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
             </Link>
             <Link
               href="/contact"
-              className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-purple-500 text-purple-400 font-bold rounded-full hover:bg-purple-500/10 transition-all hover:shadow-neon-purple transform hover:-translate-y-1"
+              className="px-10 py-5 bg-transparent border-2 border-purple-500 text-purple-400 font-black rounded-full transition-all duration-300 hover:bg-purple-500/10 hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] transform hover:-translate-y-1 active:scale-95"
             >
-              Proiectul Tău
+              PROIECTUL TĂU
             </Link>
           </div>
         </div>
@@ -82,9 +91,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Work Section */}
-      <section className="bg-black py-24 sm:py-32 relative">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <section className="bg-black py-24 sm:py-32 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[120px]" />
+
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div className="max-w-2xl">
               <h2 className="text-base font-bold tracking-widest text-pink-500 uppercase">
