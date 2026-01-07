@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Layout from "../components/layout/Layout";
+import { BRAND } from "../constants/navigation";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     message: "",
@@ -22,247 +24,197 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real application, you would send this data to your server or a form handling service
-    console.log("Form submitted:", formData);
     setFormSubmitted(true);
-    // Reset form after submission
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      message: "",
-      signType: "Business",
-    });
+    // In a real app, send to API
   };
+
+  const contactInfos = [
+    {
+      title: "Suport Vânzări",
+      email: BRAND.contact.email,
+      phone: BRAND.contact.phone,
+      icon: (
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      )
+    },
+    {
+      title: "Locația Noastră",
+      text: BRAND.contact.address,
+      icon: (
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+      )
+    },
+    {
+      title: "Program Lucru",
+      text: "Luni - Vineri: 09:00 - 18:00",
+      icon: (
+        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      )
+    }
+  ];
 
   return (
     <Layout
       title="Contactează-ne | Semne Neon Personalizate"
-      description="Contactează echipa LIGHTIFY pentru a discuta despre proiectul tău de semn neon personalizat. Solicită o ofertă sau programează o consultare astăzi."
+      description="Contactează echipa LIGHTIFY pentru a discuta despre proiectul tău."
     >
-      <div className="bg-black py-24 sm:py-32">
+      <div className="bg-black min-h-screen pt-40 pb-24 selection:bg-pink-500/30">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl space-y-16 divide-y divide-gray-800 lg:mx-0 lg:max-w-none">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-3">
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+            {/* Left Column: Info */}
+            <div className="space-y-12">
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                  Contactează-ne
-                </h2>
-                <p className="mt-4 leading-7 text-gray-300">
-                  Ai o idee pentru un semn neon personalizat? Suntem aici pentru
-                  a te ajuta să o transformi în realitate.
+                <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter text-white mb-6">
+                  Hai să <span className="text-glow-pink text-pink-500">Strălucim</span> <br />
+                  Împreună
+                </h1>
+                <p className="text-lg text-gray-400 leading-relaxed max-w-md">
+                  Ai o viziune? Noi avem lumina. Completează formularul sau contactează-ne direct prin metodele de mai jos.
                 </p>
               </div>
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
-                <div className="rounded-2xl bg-gray-900 p-10">
-                  <h3 className="text-base font-semibold leading-7 text-white">
-                    Suport Vânzări
-                  </h3>
-                  <dl className="mt-3 space-y-1 text-sm leading-6 text-gray-300">
-                    <div>
-                      <dt className="sr-only">Email</dt>
-                      <dd>
-                        <a
-                          className="font-semibold text-pink-500"
-                          href="mailto:vanzari@lightify.ro"
-                        >
-                          vanzari@lightify.ro
-                        </a>
-                      </dd>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {contactInfos.map((info) => (
+                  <div key={info.title} className="glass-card p-8 rounded-3xl group hover:border-pink-500/30 transition-all duration-500 text-left">
+                    <div className="w-12 h-12 bg-pink-500/10 rounded-2xl flex items-center justify-center text-pink-500 mb-6 group-hover:bg-pink-500 group-hover:text-white transition-all duration-500">
+                      {info.icon}
                     </div>
-                    <div className="mt-1">
-                      <dt className="sr-only">Număr de telefon</dt>
-                      <dd>+40 700 000 000</dd>
+                    <h3 className="text-lg font-bold text-white mb-2">{info.title}</h3>
+                    <div className="text-sm text-gray-400 space-y-1">
+                      {info.email && <p className="hover:text-pink-500 transition-colors cursor-pointer">{info.email}</p>}
+                      {info.phone && <p>{info.phone}</p>}
+                      {info.text && <p>{info.text}</p>}
                     </div>
-                  </dl>
-                </div>
-                <div className="rounded-2xl bg-gray-900 p-10">
-                  <h3 className="text-base font-semibold leading-7 text-white">
-                    Suport Tehnic
-                  </h3>
-                  <dl className="mt-3 space-y-1 text-sm leading-6 text-gray-300">
-                    <div>
-                      <dt className="sr-only">Email</dt>
-                      <dd>
-                        <a
-                          className="font-semibold text-pink-500"
-                          href="mailto:suport@lightify.ro"
-                        >
-                          suport@lightify.ro
-                        </a>
-                      </dd>
-                    </div>
-                    <div className="mt-1">
-                      <dt className="sr-only">Număr de telefon</dt>
-                      <dd>+40 700 000 001</dd>
-                    </div>
-                  </dl>
-                </div>
-                <div className="rounded-2xl bg-gray-900 p-10">
-                  <h3 className="text-base font-semibold leading-7 text-white">
-                    Program
-                  </h3>
-                  <dl className="mt-3 space-y-1 text-sm leading-6 text-gray-300">
-                    <div>
-                      <dt className="sr-only">Email</dt>
-                      <dd>Luni - Vineri: 9:00 - 18:00</dd>
-                    </div>
-                    <div className="mt-1">
-                      <dt className="sr-only">Număr de telefon</dt>
-                      <dd>Sâmbătă: 10:00 - 15:00</dd>
-                    </div>
-                  </dl>
-                </div>
-                <div className="rounded-2xl bg-gray-900 p-10">
-                  <h3 className="text-base font-semibold leading-7 text-white">
-                    Locație
-                  </h3>
-                  <dl className="mt-3 space-y-1 text-sm leading-6 text-gray-300">
-                    <div>
-                      <dt className="sr-only">Email</dt>
-                      <dd>București, Sector 1</dd>
-                    </div>
-                    <div className="mt-1">
-                      <dt className="sr-only">Număr de telefon</dt>
-                      <dd>Str. Luminii, Nr. 42</dd>
-                    </div>
-                  </dl>
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
-            <div className="grid grid-cols-1 gap-x-8 gap-y-10 pt-16 lg:grid-cols-3">
-              <div>
-                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                  Solicită o Ofertă
-                </h2>
-                <p className="mt-4 leading-7 text-gray-300">
-                  Completează formularul și te vom contacta cât mai curând
-                  posibil pentru a discuta despre proiectul tău.
-                </p>
-              </div>
-              <div className="lg:col-span-2">
-                <form>
-                  <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                    <div>
-                      <label
-                        htmlFor="first-name"
-                        className="block text-sm font-semibold leading-6 text-white"
-                      >
-                        Prenume
-                      </label>
-                      <div className="mt-2.5">
+
+            {/* Right Column: Form */}
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-br from-pink-500/10 to-purple-500/10 rounded-[2.5rem] blur-3xl" />
+              <div className="relative glass-card p-8 md:p-12 rounded-[2.5rem] border-white/10">
+                {formSubmitted ? (
+                  <div className="text-center py-20 animate-in fade-in zoom-in duration-500">
+                    <div className="w-20 h-20 bg-green-500/10 rounded-full flex items-center justify-center text-green-500 mx-auto mb-8">
+                      <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <h2 className="text-2xl font-bold text-white mb-4">Mesaj Trimis!</h2>
+                    <p className="text-gray-400">Te vom contacta în cel mai scurt timp posibil.</p>
+                    <button
+                      onClick={() => setFormSubmitted(false)}
+                      className="mt-8 text-pink-500 font-bold hover:underline"
+                    >
+                      Trimite alt mesaj
+                    </button>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Prenume</label>
                         <input
+                          required
                           type="text"
-                          name="first-name"
-                          id="first-name"
-                          autoComplete="given-name"
-                          className="block w-full rounded-md border-0 bg-gray-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-500 sm:text-sm sm:leading-6"
+                          name="firstName"
+                          value={formData.firstName}
+                          onChange={handleChange}
+                          className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500/50 focus:bg-white/10 transition-all font-medium"
+                          placeholder="Ex. Andrei"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Nume</label>
+                        <input
+                          required
+                          type="text"
+                          name="lastName"
+                          value={formData.lastName}
+                          onChange={handleChange}
+                          className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500/50 focus:bg-white/10 transition-all font-medium"
+                          placeholder="Ex. Ionescu"
                         />
                       </div>
                     </div>
-                    <div>
-                      <label
-                        htmlFor="last-name"
-                        className="block text-sm font-semibold leading-6 text-white"
-                      >
-                        Nume
-                      </label>
-                      <div className="mt-2.5">
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Email</label>
                         <input
-                          type="text"
-                          name="last-name"
-                          id="last-name"
-                          autoComplete="family-name"
-                          className="block w-full rounded-md border-0 bg-gray-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-500 sm:text-sm sm:leading-6"
-                        />
-                      </div>
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-semibold leading-6 text-white"
-                      >
-                        Email
-                      </label>
-                      <div className="mt-2.5">
-                        <input
+                          required
                           type="email"
                           name="email"
-                          id="email"
-                          autoComplete="email"
-                          className="block w-full rounded-md border-0 bg-gray-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-500 sm:text-sm sm:leading-6"
+                          value={formData.email}
+                          onChange={handleChange}
+                          className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500/50 focus:bg-white/10 transition-all font-medium"
+                          placeholder="andrei@exemplu.ro"
                         />
                       </div>
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="phone"
-                        className="block text-sm font-semibold leading-6 text-white"
-                      >
-                        Telefon
-                      </label>
-                      <div className="mt-2.5">
+                      <div className="space-y-2">
+                        <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Telefon</label>
                         <input
                           type="tel"
                           name="phone"
-                          id="phone"
-                          autoComplete="tel"
-                          className="block w-full rounded-md border-0 bg-gray-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-500 sm:text-sm sm:leading-6"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500/50 focus:bg-white/10 transition-all font-medium"
+                          placeholder="07xx xxx xxx"
                         />
                       </div>
                     </div>
-                    <div className="sm:col-span-2">
-                      <label
-                        htmlFor="project-type"
-                        className="block text-sm font-semibold leading-6 text-white"
+
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Tip Proiect</label>
+                      <select
+                        name="signType"
+                        value={formData.signType}
+                        onChange={handleChange}
+                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500/50 focus:bg-white/10 transition-all font-medium appearance-none"
                       >
-                        Tipul Proiectului
-                      </label>
-                      <div className="mt-2.5">
-                        <select
-                          id="project-type"
-                          name="project-type"
-                          className="block w-full rounded-md border-0 bg-gray-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 focus:ring-2 focus:ring-inset focus:ring-pink-500 sm:text-sm sm:leading-6"
-                        >
-                          <option>Afacere</option>
-                          <option>Casă</option>
-                          <option>Eveniment</option>
-                          <option>Nuntă</option>
-                          <option>Altele</option>
-                        </select>
-                      </div>
+                        <option value="Business">Afacere / Logo</option>
+                        <option value="Home">Decor Casă</option>
+                        <option value="Event">Eveniment / Nuntă</option>
+                        <option value="Other">Altul</option>
+                      </select>
                     </div>
-                    <div className="sm:col-span-2">
-                      <label
-                        htmlFor="message"
-                        className="block text-sm font-semibold leading-6 text-white"
-                      >
-                        Mesaj
-                      </label>
-                      <div className="mt-2.5">
-                        <textarea
-                          id="message"
-                          name="message"
-                          rows={4}
-                          className="block w-full rounded-md border-0 bg-gray-800 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-pink-500 sm:text-sm sm:leading-6"
-                          defaultValue={""}
-                          placeholder="Spune-ne mai multe despre proiectul tău și ce tip de semn neon îți dorești..."
-                        />
-                      </div>
+
+                    <div className="space-y-2">
+                      <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Mesaj</label>
+                      <textarea
+                        required
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        rows={4}
+                        className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white focus:outline-none focus:border-pink-500/50 focus:bg-white/10 transition-all font-medium resize-none"
+                        placeholder="Spune-ne mai multe despre ideea ta..."
+                      />
                     </div>
-                  </div>
-                  <div className="mt-8 flex justify-end">
+
                     <button
                       type="submit"
-                      className="rounded-md bg-pink-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-pink-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-500"
+                      className="w-full py-5 bg-pink-500 text-white font-extrabold rounded-2xl hover:bg-pink-400 transition-all hover:shadow-neon-pink transform active:scale-95"
                     >
-                      Trimite Mesajul
+                      Trimite Solicitarea
                     </button>
-                  </div>
-                </form>
+                  </form>
+                )}
               </div>
             </div>
+
           </div>
+
         </div>
       </div>
     </Layout>

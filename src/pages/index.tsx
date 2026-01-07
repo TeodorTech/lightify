@@ -3,6 +3,30 @@ import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/layout/Layout";
 
+const FEATURED_ITEMS = [
+  {
+    id: 1,
+    title: "Neon Birthday Party",
+    desc: "Creează o atmosferă festivă de neuitat pentru petrecerea ta cu un semn neon personalizat care va străluci în toate fotografiile.",
+    img: "/images/plushBday.jpg",
+    color: "pink"
+  },
+  {
+    id: 2,
+    title: "Neon Personalizat Brand",
+    desc: "Întărește identitatea vizuală a brandului tău cu un logo neon premium, realizat manual pentru un impact vizual maxim.",
+    img: "/images/maneleMentolate.jpg",
+    color: "purple"
+  },
+  {
+    id: 3,
+    title: "Neon Afacerea Ta",
+    desc: "Transformă-ți spațiul comercial într-o destinație modernă și primitoare cu un design neon unic, adaptat perfect afacerii tale.",
+    img: "/images/balcan.jpg",
+    color: "pink"
+  }
+];
+
 export default function Home() {
   return (
     <Layout
@@ -10,247 +34,204 @@ export default function Home() {
       description="LIGHTIFY creează semne neon premium personalizate pentru case, afaceri și evenimente. Transformă-ți spațiul cu arta noastră din neon."
     >
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <div className="h-full w-full relative">
-            <Image
-              src="/images/home2.jpg"
-              alt="Fundal lumini neon"
-              fill
-              className="object-cover brightness-40"
-              style={{ objectPosition: "center top" }}
-              priority
-            />
-            <div className="absolute inset-0 bg-black opacity-60"></div>
-          </div>
+      <section className="relative h-screen flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/home2.jpg"
+            alt="Fundal lumini neon"
+            fill
+            className="object-cover brightness-[0.3]"
+            style={{ objectPosition: "center top" }}
+            priority
+          />
+          {/* Ambient Glows */}
+          <div className="absolute top-1/4 -left-20 w-96 h-96 bg-pink-500/20 rounded-full blur-[120px] animate-pulse" />
+          <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-[120px] animate-pulse delay-700" />
         </div>
+
         <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Semne Neon Personalizate{" "}
-            <span className="block text-pink-500">
-              Realizate Manual Pentru Spațiul Tău
+          <h1 className="text-5xl font-extrabold tracking-tighter text-white sm:text-6xl lg:text-8xl">
+            Lumina care{" "}
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 text-glow-pink">
+              Te Definește
             </span>
           </h1>
-          <p className="mt-6 max-w-lg mx-auto text-xl text-gray-300 sm:max-w-3xl">
-            Transformă-ți ideile în realitate cu semnele noastre neon
-            personalizate premium. Perfecte pentru case, afaceri, evenimente și
-            multe altele.
+          <p className="mt-8 max-w-lg mx-auto text-lg sm:text-xl text-gray-300 sm:max-w-2xl leading-relaxed">
+            Transformă-ți spațiul cu arta neon realizată manual. Calitate premium, design personalizat și o experiență de iluminare de neuitat.
           </p>
-          <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
-            <div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
-              <Link
-                href="/portfolio"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-pink-500 hover:bg-pink-600 sm:px-8"
-              >
-                Vezi Lucrările Noastre
-              </Link>
-              <Link
-                href="/contact"
-                className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-pink-500 bg-white hover:bg-gray-50 sm:px-8"
-              >
-                Solicită o Ofertă
-              </Link>
-            </div>
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Link
+              href="/portfolio"
+              className="w-full sm:w-auto px-8 py-4 bg-pink-500 text-white font-bold rounded-full hover:bg-pink-400 transition-all hover:shadow-neon-pink transform hover:-translate-y-1"
+            >
+              Explorează Portofoliul
+            </Link>
+            <Link
+              href="/contact"
+              className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-purple-500 text-purple-400 font-bold rounded-full hover:bg-purple-500/10 transition-all hover:shadow-neon-purple transform hover:-translate-y-1"
+            >
+              Proiectul Tău
+            </Link>
           </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 animate-bounce">
+          <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+          <div className="w-px h-12 bg-gradient-to-b from-pink-500 to-transparent" />
         </div>
       </section>
 
       {/* Featured Work Section */}
-      <div className="bg-black py-16 sm:py-24">
+      <section className="bg-black py-24 sm:py-32 relative">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Lucrări Reprezentative
-            </h2>
-            <p className="mt-2 text-lg leading-8 text-gray-300">
-              Câteva dintre cele mai populare creații personalizate de semne
-              neon
-            </p>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+            <div className="max-w-2xl">
+              <h2 className="text-base font-bold tracking-widest text-pink-500 uppercase">
+                Exclusivități
+              </h2>
+              <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                Creații Reprezentative
+              </p>
+            </div>
+            <Link
+              href="/portfolio"
+              className="text-pink-500 font-bold hover:text-pink-400 transition-colors flex items-center gap-2 group"
+            >
+              Vezi Toată Galeria
+              <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+            </Link>
           </div>
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {[1, 2, 3].map((item) => (
-              <article key={item} className="flex flex-col items-start">
-                <div className="relative w-full">
-                  <div className="group relative overflow-hidden rounded-lg">
-                    <div className="aspect-w-4 aspect-h-3 relative h-64">
-                      <Image
-                        src={
-                          item === 1
-                            ? "/images/plushBday.jpg"
-                            : item === 2
-                            ? "/images/maneleMentolate.jpg"
-                            : "/images/balcan.jpg"
-                        }
-                        alt={`Semn neon reprezentativ ${item}`}
-                        fill
-                        className="object-cover transition group-hover:scale-105"
-                      />
-                    </div>
-                  </div>
+
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+            {FEATURED_ITEMS.map((item) => (
+              <article
+                key={item.id}
+                className="group relative flex flex-col glass-card rounded-3xl overflow-hidden hover:border-pink-500/50 transition-all duration-500"
+              >
+                <div className="relative h-72 overflow-hidden">
+                  <Image
+                    src={item.img}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                 </div>
-                <div className="max-w-xl">
-                  <div className="mt-8 flex items-center gap-x-4 text-xs">
-                    {/* Time and category chip removed as requested */}
-                  </div>
-                  <div className="group relative">
-                    <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-                      <span className="absolute inset-0" />
-                      {item === 1
-                        ? "Semn Neon Logo Restaurant"
-                        : item === 2
-                        ? "Neon Personalizat Pentru Casă"
-                        : "Panou cu Nume Pentru Nuntă"}
-                    </h3>
-                    <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-400">
-                      {item === 1
-                        ? "Semn neon personalizat creat pentru un restaurant local, îmbunătățind identitatea și atmosfera brandului."
-                        : item === 2
-                        ? "Mesaj personalizat pentru o casă modernă, adăugând caracter spațiului de locuit."
-                        : "Panou elegant cu nume creat pentru o recepție de nuntă, perfect pentru fundalul fotografiilor."}
-                    </p>
+                <div className="p-8">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-pink-500 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed line-clamp-2">
+                    {item.desc}
+                  </p>
+                  <div className="mt-6 pt-6 border-t border-white/5">
+                    <Link
+                      href="/portfolio"
+                      className={`text-xs font-bold uppercase tracking-widest ${item.color === 'pink' ? 'text-pink-500' : 'text-purple-500'}`}
+                    >
+                      Vezi Detalii
+                    </Link>
                   </div>
                 </div>
               </article>
             ))}
           </div>
-          <div className="mt-12 text-center">
-            <Link
-              href="/portfolio"
-              className="inline-flex rounded-md bg-pink-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-pink-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-500"
-            >
-              Vezi Toate Lucrările
-            </Link>
-          </div>
         </div>
-      </div>
+      </section>
 
       {/* Process Section */}
-      <div className="bg-gradient-to-b from-black to-gray-900 py-16 sm:py-24">
+      <section className="bg-black py-24 sm:py-32 relative">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent" />
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-pink-500">
-              Cum Lucrăm
+          <div className="mx-auto max-w-2xl lg:text-center mb-16">
+            <h2 className="text-base font-bold tracking-widest text-pink-500 uppercase">
+              Excelență
             </h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
               De la Concept la Creație
             </p>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Procesul nostru simplu face ușoară obținerea semnului tău neon
-              personalizat. Noi ne ocupăm de tot, de la design până la
-              instalare.
+            <p className="mt-6 text-lg leading-8 text-gray-400">
+              Procesul nostru artizanal asigură că fiecare semn neon este o capodoperă unică.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+            <dl className="grid max-w-xl grid-cols-1 gap-x-12 gap-y-16 lg:max-w-none lg:grid-cols-3">
               {[
                 {
-                  title: "Consultare Design",
+                  title: "1. Consultare Design",
                   description:
-                    "Împărtășește-ți viziunea cu echipa noastră de design. Te vom ajuta să-ți rafinezi ideile și să creăm un concept care se potrivește stilului tău.",
+                    "Echipa noastră de artiști te ajută să-ți rafinezi viziunea, oferind consultanță gratuită pentru culori, fonturi și dimensiuni.",
                   icon: (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"
-                      />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" /></svg>
                   ),
                 },
                 {
-                  title: "Producție",
+                  title: "2. Producție Manuală",
                   description:
-                    "Meșterii noștri calificați creează cu atenție semnul tău neon manual, asigurând calitate înaltă și atenție la detalii.",
+                    "Fiecare tub este modelat manual folosind tehnologia LED neon flex de ultimă generație pentru o durabilitate maximă.",
                   icon: (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.055 2.264-.22 2.814Z"
-                      />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.055 2.264-.22 2.814Z" /></svg>
                   ),
                 },
                 {
-                  title: "Livrare & Suport",
+                  title: "3. Livrare Rapidă",
                   description:
-                    "Semnul tău este ambalat cu grijă și livrat la ușa ta cu instrucțiuni clare de instalare și suport continuu.",
+                    "Expediem în siguranță prin curierat rapid, cu toate accesoriile necesare pentru instalare incluse în pachet.",
                   icon: (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"
-                      />
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" /></svg>
                   ),
                 },
               ].map((feature) => (
-                <div key={feature.title} className="flex flex-col">
-                  <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-white">
-                    <div className="h-10 w-10 flex items-center justify-center rounded-lg bg-pink-500 text-white">
-                      {feature.icon}
-                    </div>
+                <div key={feature.title} className="flex flex-col items-center text-center group">
+                  <div className="h-16 w-16 flex items-center justify-center rounded-2xl bg-gray-900 border border-white/5 text-pink-500 mb-8 group-hover:bg-pink-500 group-hover:text-white group-hover:shadow-neon-pink transition-all duration-300">
+                    {feature.icon}
+                  </div>
+                  <dt className="text-xl font-bold leading-7 text-white mb-4">
                     {feature.title}
                   </dt>
-                  <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                    <p className="flex-auto">{feature.description}</p>
+                  <dd className="text-base leading-7 text-gray-400">
+                    <p>{feature.description}</p>
                   </dd>
                 </div>
               ))}
             </dl>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* CTA Section */}
-      <div className="bg-gray-900">
-        <div className="mx-auto max-w-7xl py-16 px-6 sm:py-24 lg:flex lg:items-center lg:justify-between lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            <span className="block">Gata să-ți luminezi spațiul?</span>
-            <span className="block text-pink-500">Contactează-ne astăzi.</span>
+      <section className="relative py-24 sm:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-pink-600 to-purple-800" />
+        {/* Animated Orbs */}
+        <div className="absolute top-0 left-0 w-full h-full">
+          <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-[100px] animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-400/20 rounded-full blur-[120px] animate-pulse delay-1000" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
+            Gata să-ți luminezi spațiul?
           </h2>
-          <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-            <div className="inline-flex rounded-md shadow">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-pink-500 hover:bg-pink-600"
-              >
-                Solicită o Ofertă
-              </Link>
-            </div>
-            <div className="ml-3 inline-flex rounded-md shadow">
-              <Link
-                href="/portfolio"
-                className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-pink-500 bg-white hover:bg-gray-50"
-              >
-                Vezi Portofoliul
-              </Link>
-            </div>
+          <p className="mt-6 text-xl text-pink-100 max-w-2xl mx-auto">
+            Contactează-ne astăzi pentru o ofertă personalizată și transformă-ți viziunea în realitate.
+          </p>
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
+            <Link
+              href="/contact"
+              className="px-10 py-4 bg-white text-purple-700 font-bold rounded-full hover:bg-gray-100 transition-all hover:shadow-xl transform hover:-translate-y-1"
+            >
+              Solicită o Ofertă
+            </Link>
+            <Link
+              href="/portfolio"
+              className="px-10 py-4 bg-purple-900/40 backdrop-blur-md border border-white/20 text-white font-bold rounded-full hover:bg-purple-900/60 transition-all transform hover:-translate-y-1"
+            >
+              Vezi Portofoliul
+            </Link>
           </div>
         </div>
-      </div>
+      </section>
     </Layout>
   );
 }
