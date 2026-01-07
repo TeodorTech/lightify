@@ -13,6 +13,8 @@ export default function Contact() {
   });
 
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,10 +24,33 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormSubmitted(true);
-    // In a real app, send to API
+    setIsSubmitting(true);
+    setErrorMessage("");
+
+    try {
+      const formId = process.env.NEXT_PUBLIC_FORMSPREE_ID || "YOUR_FORM_ID";
+      const response = await fetch(`https://formspree.io/f/${formId}`, {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setFormSubmitted(true);
+      } else {
+        const data = await response.json();
+        setErrorMessage(data.error || "A intervenit o eroare. Te rugăm să încerci din nou.");
+      }
+    } catch (error) {
+      setErrorMessage("Eroare de conexiune. Te rugăm să verifici internetul.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfos = [
@@ -202,11 +227,18 @@ export default function Contact() {
                       />
                     </div>
 
+                    {errorMessage && (
+                      <div className="bg-red-500/10 border border-red-500/20 text-red-500 p-4 rounded-2xl mb-6 text-sm animate-in fade-in slide-in-from-top-2">
+                        {errorMessage}
+                      </div>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full py-5 bg-pink-500 text-white font-extrabold rounded-2xl hover:bg-pink-400 transition-all hover:shadow-neon-pink transform active:scale-95"
+                      disabled={isSubmitting}
+                      className="w-full py-5 bg-pink-500 text-white font-extrabold rounded-2xl hover:bg-pink-400 transition-all hover:shadow-neon-pink transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                     >
-                      Trimite Solicitarea
+                      {isSubmitting ? "Se trimite..." : "Trimite Solicitarea"}
                     </button>
                   </form>
                 )}
