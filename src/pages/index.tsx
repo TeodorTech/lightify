@@ -85,9 +85,9 @@ export default function Home() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-500 animate-bounce">
-          <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
-          <div className="w-px h-12 bg-gradient-to-b from-pink-500 to-transparent" />
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-gray-500 animate-bounce pointer-events-none">
+          <span className="text-[10px] uppercase tracking-[0.3em] -mr-[0.3em] mb-1">Scroll</span>
+          <div className="w-[2px] h-10 bg-gradient-to-b from-pink-500 via-pink-500/50 to-transparent rounded-full" />
         </div>
       </section>
 
