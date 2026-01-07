@@ -43,7 +43,7 @@ export default function Home() {
 
           {/* Subtle Grid Overlay */}
           <div
-            className="absolute inset-0 opacity-[0.05]"
+            className="absolute inset-0 opacity-[0.2]"
             style={{
               backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`,
               backgroundSize: '60px 60px'
@@ -84,10 +84,11 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 text-gray-500 animate-bounce pointer-events-none">
-          <span className="text-[10px] uppercase tracking-[0.3em] -mr-[0.3em] mb-1">Scroll</span>
-          <div className="w-[2px] h-10 bg-gradient-to-b from-pink-500 via-pink-500/50 to-transparent rounded-full" />
+        {/* Simplified Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none">
+          <div className="w-px h-12 bg-gradient-to-b from-pink-500 to-transparent relative animate-pulse">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-pink-500 rounded-full shadow-[0_0_12px_rgba(236,72,153,0.8)]" />
+          </div>
         </div>
       </section>
 
