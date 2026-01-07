@@ -46,7 +46,7 @@ export default function About() {
   return (
     <Layout
       title="Despre Noi | Semne Neon Personalizate"
-      description="Află povestea din spatele LIGHTIFY."
+      description="Descoperă povestea LIGHTIFY, locul unde arta neonului întâlnește măiestria manuală pentru a crea decoruri spectaculoase și unice."
     >
       <div className="bg-black text-white selection:bg-pink-500/30">
 

@@ -44,7 +44,7 @@ export default function WhyChooseUs() {
   return (
     <Layout
       title="De ce Lightify | Semne Neon Personalizate"
-      description="Descoperă de ce LIGHTIFY este alegerea preferată."
+      description="Află de ce LIGHTIFY este alegerea preferată pentru semne neon personalizate: calitate artizanală, LED-uri premium și proces de design colaborativ."
     >
       <div className="bg-black text-white selection:bg-pink-500/30 overflow-hidden">
 
