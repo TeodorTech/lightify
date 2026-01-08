@@ -30,42 +30,48 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
-              <div>
-                <h3 className="text-sm font-bold leading-6 text-white uppercase tracking-wider">Meniu</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  {NAVIGATION.map((item) => (
-                    <li key={item.name}>
-                      <Link href={item.href} className="text-sm leading-6 text-gray-400 hover:text-pink-500 transition-colors">
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-bold leading-6 text-white uppercase tracking-wider">Contact</h3>
-                <ul role="list" className="mt-6 space-y-4">
-                  <li className="text-sm leading-6 text-gray-400">
-                    <span className="block text-white font-medium">Email</span>
-                    {BRAND.contact.email}
+            <div>
+              <h3 className="text-sm font-bold leading-6 text-white uppercase tracking-wider">Meniu</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                {NAVIGATION.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.href} className="text-sm leading-6 text-gray-400 hover:text-pink-500 transition-colors">
+                      {item.name}
+                    </Link>
                   </li>
-                  <li className="text-sm leading-6 text-gray-400">
-                    <span className="block text-white font-medium">Telefon</span>
-                    {BRAND.contact.phone}
-                  </li>
-                  <li className="text-sm leading-6 text-gray-400">
-                    <span className="block text-white font-medium">Adresă</span>
-                    {BRAND.contact.address}
-                  </li>
-                </ul>
-              </div>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-bold leading-6 text-white uppercase tracking-wider">Contact</h3>
+              <ul role="list" className="mt-6 space-y-4">
+                <li className="text-sm leading-6 text-gray-400">
+                  <span className="block text-white font-medium">Email</span>
+                  {BRAND.contact.email}
+                </li>
+                <li className="text-sm leading-6 text-gray-400">
+                  <span className="block text-white font-medium">Telefon</span>
+                  {BRAND.contact.phone}
+                </li>
+                <li className="text-sm leading-6 text-gray-400">
+                  <span className="block text-white font-medium">Adresă</span>
+                  {BRAND.contact.address}
+                </li>
+              </ul>
             </div>
           </div>
         </div>
         <div className="mt-16 border-t border-white/5 pt-8 sm:mt-20 lg:mt-24">
           <p className="text-xs leading-5 text-gray-400 text-center">
-            &copy; {new Date().getFullYear()} {BRAND.name}. Toate drepturile rezervate. Realizat cu pasiune pentru lumină.
+            &copy; {new Date().getFullYear()} {BRAND.name}. Toate drepturile rezervate. Realizat de{" "}
+            <a
+              href="https://northweb.ro/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-pink-500 transition-colors font-medium"
+            >
+              North Web
+            </a>
           </p>
         </div>
       </div>
