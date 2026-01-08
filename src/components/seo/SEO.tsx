@@ -66,6 +66,8 @@ export default function SEO({
             <title>{fullTitle}</title>
             <meta name="description" content={description} />
             {canonical && <link rel="canonical" href={canonical} />}
+            <link rel="icon" type="image/png" href="/favicon.png" />
+            <link rel="apple-touch-icon" href="/favicon.png" />
 
             {/* Open Graph */}
             <meta property="og:site_name" content={siteName} />
