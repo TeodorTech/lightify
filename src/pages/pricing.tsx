@@ -5,13 +5,12 @@ import Layout from "../components/layout/Layout";
 const PRICING_TIERS = [
     {
         name: "Neon Text Standard",
-        price: "de la 350 RON",
+        price: "de la 550 RON",
         description: "Ideal pentru nume, citate scurte sau cuvinte inspiraționale. Fonturi și culori la alegere.",
         features: [
+            "Design personalizat",
             "Lățime până la 50cm",
             "Până la 8 caractere",
-            "Culori vibrante incluse",
-            "Kit montaj complet",
             "Garanție 24 luni"
         ],
         cta: "Solicită Ofertă",
@@ -20,14 +19,13 @@ const PRICING_TIERS = [
     },
     {
         name: "Logo & Premium",
-        price: "de la 850 RON",
+        price: "de la 1000 RON",
         description: "Transformă logo-ul afacerii tale sau un design complex într-un semn neon spectaculos.",
         features: [
             "Design complex / Logo",
-            "Dimensiuni personalizate",
+            "Consultanță design 1-la-1",
             "Opțiune RGB (schimbă culoarea)",
-            "Suport acrilic premium",
-            "Sursă alimentare inclusă"
+            "Garanție 24 luni"
         ],
         cta: "Configurează Acum",
         popular: true,
@@ -40,9 +38,8 @@ const PRICING_TIERS = [
         features: [
             "Dimensiuni nelimitate",
             "Consultanță design 1-la-1",
-            "Montaj profesional opțional",
-            "Efecte dinamice avansate",
-            "Mentenanță prioritară"
+            "Mentenanță prioritară",
+            "Garanție 24 luni"
         ],
         cta: "Discută Proiectul",
         popular: false,
@@ -136,8 +133,8 @@ export default function Pricing() {
                                     <Link
                                         href="/contact"
                                         className={`w-full py-4 rounded-2xl font-bold text-center transition-all ${tier.popular
-                                                ? 'bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-neon-purple hover:opacity-90'
-                                                : 'bg-white/5 text-white border border-white/10 hover:bg-white/10'
+                                            ? 'bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-neon-purple hover:opacity-90'
+                                            : 'bg-white/5 text-white border border-white/10 hover:bg-white/10'
                                             }`}
                                     >
                                         {tier.cta}
@@ -179,15 +176,15 @@ export default function Pricing() {
                                     <div className="space-y-4">
                                         <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
                                             <span className="text-gray-400">Cuvântul "Dream" (40cm)</span>
-                                            <span className="font-bold">~ 420 RON</span>
+                                            <span className="font-bold">~ 550 RON</span>
                                         </div>
                                         <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
                                             <span className="text-gray-400">Logo "Coffee Shop" (60cm)</span>
-                                            <span className="font-bold">~ 950 RON</span>
+                                            <span className="font-bold">~ 1500 RON</span>
                                         </div>
                                         <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
-                                            <span className="text-gray-400">Semn "Wedding" + Controler RGB</span>
-                                            <span className="font-bold">~ 1200 RON</span>
+                                            <span className="text-gray-400">Semn "Wedding Day" + Controler RGB</span>
+                                            <span className="font-bold">~ 2000 RON</span>
                                         </div>
                                     </div>
                                     <div className="mt-8 pt-8 border-t border-white/10">

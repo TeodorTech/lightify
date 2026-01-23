@@ -15,7 +15,7 @@ const FEATURED_ITEMS = [
     id: 2,
     title: "Neon Personalizat Brand",
     desc: "Întărește identitatea vizuală a brandului tău cu un logo neon premium, realizat manual pentru un impact vizual maxim.",
-    img: "/images/maneleMentolate.jpg",
+    img: "/images/jidvei.jpeg",
     color: "purple"
   },
   {

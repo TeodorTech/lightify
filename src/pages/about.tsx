@@ -73,7 +73,7 @@ export default function About() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-[2.5rem] blur-2xl opacity-50 group-hover:opacity-100 transition duration-500" />
                 <div className="relative glass-card rounded-[2rem] overflow-hidden">
                   <Image
-                    src="/images/hearts.jpeg"
+                    src="/images/lightify.JPG"
                     alt="Workplace"
                     width={800}
                     height={1000}
