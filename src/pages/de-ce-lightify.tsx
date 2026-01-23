@@ -66,8 +66,9 @@ const STEPS = [
 export default function WhyChooseUs() {
   return (
     <Layout
-      title="De ce Lightify | Semne Neon Personalizate"
-      description="Află de ce LIGHTIFY este alegerea preferată pentru semne neon personalizate: calitate artizanală, LED-uri premium și proces de design colaborativ."
+      title="De ce Lightify? Calitate Semne Neon & Afișe Luminoase"
+      description="Află de ce Lightify este alegerea potrivită pentru semne neon personalizate. Folosim materiale premium, oferim garanție extinsă și consultanță dedicată pentru proiectul tău."
+      keywords="calitate neon, avantaj lightify, de ce noi, garantie semne neon, neon flex premium, durabilitate led"
     >
       <div className="bg-black text-white selection:bg-pink-500/30 overflow-hidden">
 

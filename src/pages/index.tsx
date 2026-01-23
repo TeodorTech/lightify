@@ -30,8 +30,9 @@ const FEATURED_ITEMS = [
 export default function Home() {
   return (
     <Layout
-      title="Semne Neon Personalizate"
-      description="LIGHTIFY creează semne neon premium personalizate pentru case, afaceri și evenimente. Transformă-ți spațiul cu arta noastră din neon."
+      title="Neon Personalizat București | Lightify - Semne Neon, Afișe Luminoase, LED"
+      description="Lightify bucuresti: semne neon personalizate, afișe luminoase și reclame LED premium. Producție locală pentru afaceri, evenimente și decor. Îți aducem viziunea la lumină!"
+      keywords="neon bucuresti, semne neon, afis luminos, led, reclame luminoase, firme luminoase, neon personalizat, lightify, decoratiuni neon"
     >
       {/* Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden">
@@ -69,7 +70,7 @@ export default function Home() {
           </p>
           <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-8 animate-in fade-in zoom-in duration-1000 delay-500">
             <Link
-              href="/portfolio"
+              href="/portofoliu-semne-neon"
               className="group relative px-10 py-5 bg-pink-600 text-white font-black rounded-full transition-all duration-300 hover:bg-pink-500 hover:shadow-[0_0_30px_rgba(236,72,153,0.6)] transform hover:-translate-y-1 active:scale-95 overflow-hidden"
             >
               <span className="relative z-10">Explorează portofoliul</span>
@@ -106,7 +107,7 @@ export default function Home() {
               </p>
             </div>
             <Link
-              href="/portfolio"
+              href="/portofoliu-semne-neon"
               className="text-pink-500 font-bold hover:text-pink-400 transition-colors flex items-center gap-2 group"
             >
               Vezi toată galeria
@@ -138,7 +139,7 @@ export default function Home() {
                   </p>
                   <div className="mt-6 pt-6 border-t border-white/5">
                     <Link
-                      href="/portfolio"
+                      href="/portofoliu-semne-neon"
                       className={`text-xs font-bold uppercase tracking-widest ${item.color === 'pink' ? 'text-pink-500' : 'text-purple-500'}`}
                     >
                       Vezi Detalii
@@ -235,7 +236,7 @@ export default function Home() {
               Solicită o ofertă
             </Link>
             <Link
-              href="/portfolio"
+              href="/portofoliu-semne-neon"
               className="px-10 py-4 bg-purple-900/40 backdrop-blur-md border border-white/20 text-white font-bold rounded-full hover:bg-purple-900/60 transition-all transform hover:-translate-y-1"
             >
               Vezi portofoliul

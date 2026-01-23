@@ -5,6 +5,7 @@ import { BRAND } from "../../constants/navigation";
 interface SEOProps {
     title: string;
     description: string;
+    keywords?: string;
     canonical?: string;
     ogType?: string;
     ogImage?: string;
@@ -14,6 +15,7 @@ interface SEOProps {
 export default function SEO({
     title,
     description,
+    keywords,
     canonical,
     ogType = "website",
     ogImage = "/images/og-image.jpg", // Default OG image
@@ -22,6 +24,7 @@ export default function SEO({
     const siteName = "LIGHTIFY";
     const fullTitle = `${title} | ${siteName}`;
     const url = "https://lightify.ro"; // Update with real domain if different
+    const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : url);
 
     const structuredData = {
         "@context": "https://schema.org",
@@ -65,7 +68,8 @@ export default function SEO({
         <Head>
             <title>{fullTitle}</title>
             <meta name="description" content={description} />
-            {canonical && <link rel="canonical" href={canonical} />}
+            {keywords && <meta name="keywords" content={keywords} />}
+            <link rel="canonical" href={canonicalUrl} />
             <link rel="icon" type="image/png" href="/favicon.png" />
             <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
             <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
@@ -76,7 +80,7 @@ export default function SEO({
             <meta property="og:title" content={fullTitle} />
             <meta property="og:description" content={description} />
             <meta property="og:type" content={ogType} />
-            <meta property="og:url" content={canonical || url} />
+            <meta property="og:url" content={canonicalUrl} />
             <meta property="og:image" content={`${url}${ogImage}`} />
             <meta property="og:locale" content="ro_RO" />
 

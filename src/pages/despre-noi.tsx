@@ -45,8 +45,9 @@ const VALUES = [
 export default function About() {
   return (
     <Layout
-      title="Despre Noi | Semne Neon Personalizate"
-      description="Descoperă povestea LIGHTIFY, locul unde arta neonului întâlnește măiestria manuală pentru a crea decoruri spectaculoase și unice."
+      title="Despre Lightify | Atelier Semne Neon & LED București"
+      description="Povestea Lightify - Pasiune pentru neon și lumină. Află cum creăm manual cele mai bune semne neon și afișe luminoase din București, folosind tehnologie LED de ultimă generație."
+      keywords="despre lightify, atelier neon bucuresti, producator reclame luminoase, echipa lightify, cine suntem, productie publicitara led"
     >
       <div className="bg-black text-white selection:bg-pink-500/30">
 

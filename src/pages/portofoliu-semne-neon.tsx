@@ -107,8 +107,9 @@ export default function Portfolio() {
 
   return (
     <Layout
-      title="Portofoliu | Semne Neon Personalizate"
-      description="Explorează colecția noastră de semne neon personalizate pentru afaceri, case și evenimente."
+      title="Portofoliu Semne Neon & Afișe Luminoase | Lightify București"
+      description="Descoperă galeria noastră de semne neon personalizate, sigle luminoase și proiecte LED realizate de Lightify în București. Vezi cum am transformat branduri și evenimente."
+      keywords="portofoliu neon, galerie semne neon, modele firme luminoase, exemple neon personalizat, poze afise led, proiecte lightify"
     >
       <div className="bg-black min-h-screen pt-32 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

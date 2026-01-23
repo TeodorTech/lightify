@@ -1,9 +1,9 @@
 export const NAVIGATION = [
     { name: "Acasă", href: "/" },
-    { name: "De ce lightify", href: "/why-choose-us" },
-    { name: "Portofoliu", href: "/portfolio" },
-    { name: "Prețuri", href: "/pricing" },
-    { name: "Despre", href: "/about" },
+    { name: "De ce noi", href: "/de-ce-lightify" },
+    { name: "Portofoliu", href: "/portofoliu-semne-neon" },
+    { name: "Prețuri", href: "/preturi-neon-led" },
+    { name: "Despre", href: "/despre-noi" },
     { name: "Contact", href: "/contact" },
 ];
 

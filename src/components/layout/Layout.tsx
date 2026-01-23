@@ -7,9 +7,10 @@ interface LayoutProps {
   children: ReactNode;
   title?: string;
   description?: string;
+  keywords?: string;
 }
 
-export default function Layout({ children, title, description }: LayoutProps) {
+export default function Layout({ children, title, description, keywords }: LayoutProps) {
   const pageDescription =
     description ||
     "Handcrafted custom neon signs for home, business, and events. Bring your space to life with LIGHTIFY.";

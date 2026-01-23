@@ -87,8 +87,9 @@ export default function Contact() {
 
   return (
     <Layout
-      title="Contactează-ne | Semne Neon Personalizate"
-      description="Contactează echipa LIGHTIFY pentru a discuta despre proiectul tău."
+      title="Contact Lightify | Comandă Semne Neon Personalizate București"
+      description="Contactează Lightify pentru o ofertă personalizată de semne neon, afișe luminoase sau panouri LED. Suntem aici să îți luminăm ideile! Telefon, email și locație atelier."
+      keywords="contact lightify, comanda neon personalizat, telefon firme luminoase, adresa atelier neon bucuresti, email lightify"
     >
       <div className="bg-black min-h-screen pt-40 pb-24 selection:bg-pink-500/30">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

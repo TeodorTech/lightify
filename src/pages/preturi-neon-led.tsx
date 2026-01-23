@@ -69,8 +69,9 @@ const PRICE_FACTORS = [
 export default function Pricing() {
     return (
         <Layout
-            title="Prețuri | Semne Neon Personalizate"
-            description="Află cât costă un semn neon personalizat la LIGHTIFY. Transparență totală, pachete pentru orice buget și calitate premium garantată."
+            title="Prețuri Semne Neon Personalizate | Afișe Luminoase LED | Lightify"
+            description="Vezi prețurile pentru semne neon personalizate și afișe luminoase LED în București. Oferte transparente pentru logo-uri neon, texte luminoase și proiecte speciale de la Lightify."
+            keywords="preturi neon personalizat, cost firma luminoasa, pret afis led, oferta semne neon, neon ieftin bucuresti, pret logo neon"
         >
             <div className="bg-black text-white selection:bg-pink-500/30">
 
