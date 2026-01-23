@@ -22,7 +22,7 @@ const FEATURED_ITEMS = [
     id: 3,
     title: "Neon Afacerea Ta",
     desc: "Transformă-ți spațiul comercial într-o destinație modernă și primitoare cu un design neon unic, adaptat perfect afacerii tale.",
-    img: "/images/balcan.webp",
+    img: "/images/balcan.jpg",
     color: "pink"
   }
 ];
