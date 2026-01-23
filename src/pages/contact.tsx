@@ -55,7 +55,7 @@ export default function Contact() {
 
   const contactInfos = [
     {
-      title: "Suport Vânzări",
+      title: "Suport vânzări",
       email: BRAND.contact.email,
       phone: BRAND.contact.phone,
       icon: (
@@ -65,7 +65,7 @@ export default function Contact() {
       )
     },
     {
-      title: "Locația Noastră",
+      title: "Locația noastră",
       text: BRAND.contact.address,
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -75,7 +75,7 @@ export default function Contact() {
       )
     },
     {
-      title: "Program Lucru",
+      title: "Program lucru",
       text: "Luni - Vineri: 09:00 - 18:00",
       icon: (
         <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -99,8 +99,8 @@ export default function Contact() {
             <div className="space-y-12">
               <div>
                 <h1 className="text-5xl md:text-6xl font-extrabold tracking-tighter text-white mb-6">
-                  Hai să <span className="text-glow-pink text-pink-500">Strălucim</span> <br />
-                  Împreună
+                  Hai să <span className="text-glow-pink text-pink-500">strălucim</span> <br />
+                  împreună
                 </h1>
                 <p className="text-lg text-gray-400 leading-relaxed max-w-md">
                   Ai o viziune? Noi avem lumina. Completează formularul sau contactează-ne direct prin metodele de mai jos.
@@ -135,7 +135,7 @@ export default function Contact() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h2 className="text-2xl font-bold text-white mb-4">Mesaj Trimis!</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">Mesaj trimis!</h2>
                     <p className="text-gray-400">Te vom contacta în cel mai scurt timp posibil.</p>
                     <button
                       onClick={() => setFormSubmitted(false)}
@@ -200,7 +200,7 @@ export default function Contact() {
                     </div>
 
                     <div className="space-y-2">
-                      <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Tip Proiect</label>
+                      <label className="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1">Tip proiect</label>
                       <select
                         name="signType"
                         value={formData.signType}
@@ -238,7 +238,7 @@ export default function Contact() {
                       disabled={isSubmitting}
                       className="w-full py-5 bg-pink-500 text-white font-extrabold rounded-2xl hover:bg-pink-400 transition-all hover:shadow-neon-pink transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                     >
-                      {isSubmitting ? "Se trimite..." : "Trimite Solicitarea"}
+                      {isSubmitting ? "Se trimite..." : "Trimite solicitarea"}
                     </button>
                   </form>
                 )}

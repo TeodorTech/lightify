@@ -81,7 +81,7 @@ export default function Navbar() {
               href="/contact"
               className="group relative inline-flex items-center justify-center px-6 py-2.5 font-bold text-white transition-all duration-200 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full hover:shadow-neon-pink"
             >
-              <span className="relative">Solicită Ofertă</span>
+              <span className="relative">Solicită ofertă</span>
             </Link>
           </div>
         </nav>
@@ -132,7 +132,7 @@ export default function Navbar() {
                     className="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-pink-500 to-purple-600 px-6 py-4 text-base font-bold text-white shadow-neon-pink"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Solicită Ofertă
+                    Solicită ofertă
                   </Link>
                 </div>
               </div>

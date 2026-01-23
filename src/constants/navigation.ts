@@ -1,6 +1,6 @@
 export const NAVIGATION = [
     { name: "Acasă", href: "/" },
-    { name: "De ce Lightify", href: "/why-choose-us" },
+    { name: "De ce lightify", href: "/why-choose-us" },
     { name: "Portofoliu", href: "/portfolio" },
     { name: "Prețuri", href: "/pricing" },
     { name: "Despre", href: "/about" },

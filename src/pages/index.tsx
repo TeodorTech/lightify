@@ -61,7 +61,7 @@ export default function Home() {
           <h1 className="text-6xl font-extrabold tracking-tighter text-white sm:text-7xl lg:text-9xl animate-in fade-in slide-in-from-top-4 duration-1000">
             Lumina care{" "}
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 text-glow-pink pb-2">
-              Te Definește
+              te definește
             </span>
           </h1>
           <p className="mt-8 max-w-lg mx-auto text-lg sm:text-2xl text-gray-300 sm:max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
@@ -72,14 +72,14 @@ export default function Home() {
               href="/portfolio"
               className="group relative px-10 py-5 bg-pink-600 text-white font-black rounded-full transition-all duration-300 hover:bg-pink-500 hover:shadow-[0_0_30px_rgba(236,72,153,0.6)] transform hover:-translate-y-1 active:scale-95 overflow-hidden"
             >
-              <span className="relative z-10">EXPLOREAZĂ PORTOFOLIUL</span>
+              <span className="relative z-10">Explorează portofoliul</span>
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]" />
             </Link>
             <Link
               href="/contact"
               className="px-10 py-5 bg-transparent border-2 border-purple-500 text-purple-400 font-black rounded-full transition-all duration-300 hover:bg-purple-500/10 hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] transform hover:-translate-y-1 active:scale-95"
             >
-              PROIECTUL TĂU
+              Proiectul tău
             </Link>
           </div>
         </div>
@@ -102,14 +102,14 @@ export default function Home() {
                 Exclusivități
               </h2>
               <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-                Creații Reprezentative
+                Creații reprezentative
               </p>
             </div>
             <Link
               href="/portfolio"
               className="text-pink-500 font-bold hover:text-pink-400 transition-colors flex items-center gap-2 group"
             >
-              Vezi Toată Galeria
+              Vezi toată galeria
               <span className="transform group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
@@ -160,7 +160,7 @@ export default function Home() {
               Excelență
             </h2>
             <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              De la Concept la Creație
+              De la concept la creație
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-400">
               Procesul nostru artizanal asigură că fiecare semn neon este o capodoperă unică.
@@ -170,7 +170,7 @@ export default function Home() {
             <dl className="grid max-w-xl grid-cols-1 gap-x-12 gap-y-16 lg:max-w-none lg:grid-cols-3">
               {[
                 {
-                  title: "1. Consultare Design",
+                  title: "Consultare & design",
                   description:
                     "Echipa noastră de artiști te ajută să-ți rafinezi viziunea, oferind consultanță gratuită pentru culori, fonturi și dimensiuni.",
                   icon: (
@@ -178,7 +178,7 @@ export default function Home() {
                   ),
                 },
                 {
-                  title: "2. Producție Manuală",
+                  title: "Producție manuală",
                   description:
                     "Fiecare tub este modelat manual folosind tehnologia LED neon flex de ultimă generație pentru o durabilitate maximă.",
                   icon: (
@@ -186,7 +186,7 @@ export default function Home() {
                   ),
                 },
                 {
-                  title: "3. Livrare Rapidă",
+                  title: "Livrare rapidă",
                   description:
                     "Expediem în siguranță prin curierat rapid, cu toate accesoriile necesare pentru instalare incluse în pachet.",
                   icon: (
@@ -194,11 +194,11 @@ export default function Home() {
                   ),
                 },
               ].map((feature) => (
-                <div key={feature.title} className="flex flex-col items-center text-center group">
-                  <div className="h-16 w-16 flex items-center justify-center rounded-2xl bg-gray-900 border border-white/5 text-pink-500 mb-8 group-hover:bg-pink-500 group-hover:text-white group-hover:shadow-neon-pink transition-all duration-300">
+                <div key={feature.title} className="flex flex-col items-center text-center group bg-zinc-950/50 p-10 rounded-[2.5rem] border border-white/5 hover:border-pink-500/30 transition-all duration-500 hover:shadow-neon-pink/10">
+                  <div className="h-20 w-20 flex items-center justify-center rounded-2xl bg-black border border-white/10 text-pink-500 mb-8 group-hover:bg-pink-500 group-hover:text-white group-hover:shadow-neon-pink transition-all duration-500">
                     {feature.icon}
                   </div>
-                  <dt className="text-xl font-bold leading-7 text-white mb-4">
+                  <dt className="text-2xl font-bold leading-7 text-white mb-4 group-hover:text-pink-500 transition-colors">
                     {feature.title}
                   </dt>
                   <dd className="text-base leading-7 text-gray-400">
@@ -232,13 +232,13 @@ export default function Home() {
               href="/contact"
               className="px-10 py-4 bg-white text-purple-700 font-bold rounded-full hover:bg-gray-100 transition-all hover:shadow-xl transform hover:-translate-y-1"
             >
-              Solicită o Ofertă
+              Solicită o ofertă
             </Link>
             <Link
               href="/portfolio"
               className="px-10 py-4 bg-purple-900/40 backdrop-blur-md border border-white/20 text-white font-bold rounded-full hover:bg-purple-900/60 transition-all transform hover:-translate-y-1"
             >
-              Vezi Portofoliul
+              Vezi portofoliul
             </Link>
           </div>
         </div>

@@ -5,7 +5,7 @@ import Layout from "../components/layout/Layout";
 
 const VALUES = [
   {
-    name: "Meșteșugărie de Calitate",
+    name: "Meșteșugărie de calitate",
     description: "Ne angajăm la cele mai înalte standarde în fiecare semn pe care îl creăm. Nu facem compromisuri privind calitatea materialelor.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -14,7 +14,7 @@ const VALUES = [
     )
   },
   {
-    name: "Excelență Creativă",
+    name: "Excelență creativă",
     description: "Îmbinăm meșteșugul tradițional cu designul modern pentru a crea opere de artă neon care sunt atât estetice, cât și funcționale.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -23,7 +23,7 @@ const VALUES = [
     )
   },
   {
-    name: "Satisfacția Clienților",
+    name: "Satisfacția clienților",
     description: "Îți ascultăm viziunea și lucrăm îndeaproape cu tine pentru a ne asigura că fiecare semn neon depășește așteptările tale.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -32,7 +32,7 @@ const VALUES = [
     )
   },
   {
-    name: "Inovație Sustenabilă",
+    name: "Inovație sustenabilă",
     description: "Explorăm în mod constant metode și materiale noi pentru a face produsele noastre mai eficiente energetic și prietenoase cu mediul.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -56,8 +56,8 @@ export default function About() {
 
           <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 animate-in fade-in slide-in-from-top-4 duration-1000">
-              Povestea Noastră în <br />
-              <span className="text-glow-pink text-pink-500">Lumină Vibrante</span>
+              Povestea noastră în <br />
+              <span className="text-glow-pink text-pink-500">lumină vibrante</span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg md:text-xl text-gray-400 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
               Suntem o echipă de artiști și vizionari dedicați transformării spațiilor prin arta neonului modern.
@@ -84,11 +84,11 @@ export default function About() {
 
               <div className="order-1 lg:order-2 space-y-8">
                 <div className="inline-block px-4 py-1.5 bg-pink-500/10 border border-pink-500/20 rounded-full text-pink-500 text-sm font-bold tracking-widest uppercase">
-                  Începuturile Noastre
+                  Începuturile noastre
                 </div>
                 <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
-                  De la Pasiune la <br />
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">Perfecțiune Luminoasă</span>
+                  De la pasiune la <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">perfecțiune luminoasă</span>
                 </h2>
                 <div className="space-y-6 text-gray-400 text-lg leading-relaxed">
                   <p>
@@ -109,7 +109,7 @@ export default function About() {
         {/* Values Section */}
         <section className="py-32 bg-zinc-950/50">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center mb-20">
-            <h2 className="text-4xl font-bold mb-6">Valori Care Ne Definesc</h2>
+            <h2 className="text-4xl font-bold mb-6">Valori care ne definesc</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Succesul nostru se bazează pe patru piloni fundamentali care ghidează excelența în fiecare detaliu.
             </p>
@@ -142,7 +142,7 @@ export default function About() {
             <div className="glass-card rounded-[3rem] p-12 md:p-24 text-center border-white/10">
               <h2 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-8 leading-tight">
                 Vrei să fii parte din <br />
-                <span className="text-glow-pink text-pink-500">Povestea Noastră?</span>
+                <span className="text-glow-pink text-pink-500">povestea noastră?</span>
               </h2>
               <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
                 Echipa noastră este pregătită să îți transforme viziunea în realitate luminoasă. Hai să discutăm.

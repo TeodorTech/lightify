@@ -5,7 +5,7 @@ import Layout from "../components/layout/Layout";
 
 const FEATURES = [
   {
-    title: "Calitate Meșteșugărească",
+    title: "Calitate meșteșugărească",
     description: "Fiecare semn este creat manual cu meticulozitate de echipa noastră de artizani calificați.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -14,7 +14,7 @@ const FEATURES = [
     )
   },
   {
-    title: "Materiale Premium",
+    title: "Materiale premium",
     description: "Folosim doar LED neon flex și componente de cea mai înaltă calitate, asigurând durabilitatea.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -23,7 +23,7 @@ const FEATURES = [
     )
   },
   {
-    title: "Servicii Personalizate",
+    title: "Servicii personalizate",
     description: "De la concept la instalare, lucrăm îndeaproape cu tine pentru a realiza viziunea ta.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -34,10 +34,33 @@ const FEATURES = [
 ];
 
 const STEPS = [
-  { id: "01", title: "Consultare", desc: "Împărtășește viziunea ta și noi îți oferim îndrumare de specialitate." },
-  { id: "02", title: "Design", desc: "Designerii noștri creează un concept vizual pentru aprobarea ta." },
-  { id: "03", title: "Producție", desc: "Meșterii noștri creează cu atenție semnul tău neon manual." },
-  { id: "04", title: "Livrare", desc: "Semnul tău este ambalat și livrat cu suport complet pentru instalare." },
+  {
+    title: "Consultare & design",
+    desc: "Împărtășește viziunea ta și noi transformăm ideile în concepte vizuale spectaculoase.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
+      </svg>
+    )
+  },
+  {
+    title: "Producție manuală",
+    desc: "Meșterii noștri creează manual fiecare detaliu folosind materiale de cea mai înaltă calitate.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.055 2.264-.22 2.814Z" />
+      </svg>
+    )
+  },
+  {
+    title: "Livrare rapidă",
+    desc: "Semnul tău este ambalat cu grijă și livrat rapid, gata să îți lumineze spațiul.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+      </svg>
+    )
+  },
 ];
 
 export default function WhyChooseUs() {
@@ -54,7 +77,7 @@ export default function WhyChooseUs() {
           <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 animate-in fade-in slide-in-from-top-4 duration-1000">
               Excelența în <br />
-              <span className="text-glow-pink text-pink-500">Fiecare Detaliu</span>
+              <span className="text-glow-pink text-pink-500">fiecare detaliu</span>
             </h1>
             <p className="mx-auto max-w-2xl text-lg md:text-xl text-gray-400 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
               Nu facem doar semne. Facem artă luminoasă care redefinește spațiile. Descoperă ce ne face lideri în neon modern.
@@ -88,23 +111,23 @@ export default function WhyChooseUs() {
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="text-center mb-20">
-              <h2 className="text-4xl font-bold mb-6">Procesul Nostru</h2>
+              <h2 className="text-4xl font-bold mb-6">Procesul nostru</h2>
               <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
                 De la viziune la instalare, procesul nostru este gândit pentru a fi simplu și revoluționar.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
               {/* Connector line for desktop */}
-              <div className="hidden lg:block absolute top-[4.5rem] left-0 w-full h-px bg-white/5 -z-10" />
+              <div className="hidden lg:block absolute top-[4.5rem] left-[10%] w-[80%] h-px bg-white/5 -z-10" />
 
               {STEPS.map((step) => (
-                <div key={step.id} className="relative group text-center lg:text-left">
-                  <div className="w-12 h-12 bg-black border border-white/10 rounded-xl flex items-center justify-center text-pink-500 font-black text-xl mb-8 mx-auto lg:mx-0 group-hover:border-pink-500/50 transition-colors shadow-xl">
-                    {step.id}
+                <div key={step.title} className="relative group text-center lg:text-left">
+                  <div className="w-16 h-16 bg-black border border-white/10 rounded-2xl flex items-center justify-center text-pink-500 mb-8 mx-auto lg:mx-0 group-hover:border-pink-500/50 transition-all duration-500 shadow-xl group-hover:bg-pink-500/5 group-hover:shadow-neon-pink/20">
+                    {step.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-4">{step.title}</h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
+                  <h3 className="text-2xl font-bold mb-4 group-hover:text-pink-500 transition-colors">{step.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{step.desc}</p>
                 </div>
               ))}
             </div>
@@ -119,16 +142,16 @@ export default function WhyChooseUs() {
 
               <div className="flex-1 space-y-8">
                 <div className="inline-block px-4 py-1 bg-white/5 border border-white/10 rounded-full text-xs font-bold uppercase tracking-widest text-pink-500">
-                  Calitate Fără Compromis
+                  Calitate fără compromis
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-                  Creat să <span className="text-glow-pink">Impresioneze</span>. <br />
-                  Creat să Dureze.
+                  Creat să <span className="text-glow-pink">impresioneze</span>. <br />
+                  Creat să dureze.
                 </h2>
 
                 <div className="space-y-6">
                   {[
-                    { t: "Eficiență Energetică", d: "Până la 80% mai puțin consum față de neonul tradițional." },
+                    { t: "Eficiență energetică", d: "Până la 80% mai puțin consum față de neonul tradițional." },
                     { t: "Durabilitate", d: "Peste 50.000 de ore de funcționare continuă." },
                     { t: "Siguranță", d: "Materiale rezistente, reci la atingere și sigure." }
                   ].map((item) => (
@@ -168,7 +191,7 @@ export default function WhyChooseUs() {
             href="/contact"
             className="px-8 py-4 bg-pink-500 text-white font-bold rounded-full hover:bg-pink-400 transition-all hover:shadow-neon-pink inline-block shadow-lg"
           >
-            Discută Cu Noi Astăzi
+            Discută cu noi astăzi
           </Link>
         </section>
 

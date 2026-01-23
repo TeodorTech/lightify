@@ -13,7 +13,7 @@ const PRICING_TIERS = [
             "Până la 8 caractere",
             "Garanție 24 luni"
         ],
-        cta: "Solicită Ofertă",
+        cta: "Solicită ofertă",
         popular: false,
         color: "pink"
     },
@@ -27,7 +27,7 @@ const PRICING_TIERS = [
             "Opțiune RGB (schimbă culoarea)",
             "Garanție 24 luni"
         ],
-        cta: "Configurează Acum",
+        cta: "Configurează acum",
         popular: true,
         color: "purple"
     },
@@ -41,7 +41,7 @@ const PRICING_TIERS = [
             "Mentenanță prioritară",
             "Garanție 24 luni"
         ],
-        cta: "Discută Proiectul",
+        cta: "Discută proiectul",
         popular: false,
         color: "blue"
     }
@@ -80,10 +80,10 @@ export default function Pricing() {
 
                     <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
                         <div className="inline-block px-4 py-1.5 bg-pink-500/10 border border-pink-500/20 rounded-full text-pink-500 text-sm font-bold tracking-widest uppercase mb-8">
-                            Investește în Atmosferă
+                            Investește în atmosferă
                         </div>
                         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 animate-in fade-in slide-in-from-top-4 duration-1000">
-                            Prețuri <span className="text-glow-pink text-pink-500">Transparente</span>
+                            Prețuri <span className="text-glow-pink text-pink-500">transparente</span>
                         </h1>
                         <p className="mx-auto max-w-2xl text-lg md:text-xl text-gray-400 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
                             Calitatea premium nu trebuie să fie un mister. Am creat structuri de preț clare pentru a te ajuta să-ți planifici proiectul ideal.
@@ -152,7 +152,7 @@ export default function Pricing() {
                             <div>
                                 <h2 className="text-4xl font-bold mb-8 leading-tight">
                                     Ce influențează <br />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">Costul Semnului Tău?</span>
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">costul semnului tău?</span>
                                 </h2>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
                                     {PRICE_FACTORS.map((factor) => (
@@ -215,7 +215,7 @@ export default function Pricing() {
                                 href="/contact"
                                 className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-black rounded-full hover:shadow-[0_0_30px_rgba(236,72,153,0.4)] transition-all transform hover:-translate-y-1"
                             >
-                                OBȚINE OFERTA TA ACUM
+                                Obține oferta ta acum
                                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
