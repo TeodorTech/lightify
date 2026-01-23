@@ -23,7 +23,7 @@ const portfolioItems = [
     title: "Neon Balcan HR",
     description: "Transformă imaginea afacerii tale cu un semn neon vibrant care atrage privirile și creează o identitate memorabilă.",
     category: "afaceri",
-    imageUrl: "/images/balcan.webp",
+    imageUrl: "/images/balcan.jpg",
   },
   {
     id: 3,
@@ -65,7 +65,7 @@ const portfolioItems = [
     title: "Neon Thunder Strike",
     description: "O explozie de energie capturată în neon, perfectă pentru a adăuga un look electrizant oricărui interior modern.",
     category: "casă",
-    imageUrl: "/images/thunder copy.webp",
+    imageUrl: "/images/thunder.webp",
   },
   {
     id: 9,
