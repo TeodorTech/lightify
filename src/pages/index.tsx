@@ -8,21 +8,21 @@ const FEATURED_ITEMS = [
     id: 1,
     title: "Neon Birthday Party",
     desc: "Creează o atmosferă festivă de neuitat pentru petrecerea ta cu un semn neon personalizat care va străluci în toate fotografiile.",
-    img: "/images/plushBday.jpg",
+    img: "/images/plushBday.webp",
     color: "pink"
   },
   {
     id: 2,
     title: "Neon Personalizat Brand",
     desc: "Întărește identitatea vizuală a brandului tău cu un logo neon premium, realizat manual pentru un impact vizual maxim.",
-    img: "/images/jidvei.jpeg",
+    img: "/images/jidvei.webp",
     color: "purple"
   },
   {
     id: 3,
     title: "Neon Afacerea Ta",
     desc: "Transformă-ți spațiul comercial într-o destinație modernă și primitoare cu un design neon unic, adaptat perfect afacerii tale.",
-    img: "/images/balcan.jpg",
+    img: "/images/balcan.webp",
     color: "pink"
   }
 ];
