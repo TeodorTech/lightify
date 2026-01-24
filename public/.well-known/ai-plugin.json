@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Lightify",
+    "name_for_model": "lightify",
+    "description_for_human": "Custom neon signs portfolio and pricing.",
+    "description_for_model": "Lightify is a custom neon sign business. This plugin/site provides information about custom neon sign products, pricing, and portfolio.",
+    "auth": {
+        "type": "none"
+    },
+    "api": {
+        "type": "openapi",
+        "url": "https://lightify.ro/openapi.yaml",
+        "is_user_authenticated": false
+    },
+    "logo_url": "https://lightify.ro/icon-512.png",
+    "contact_email": "contact@lightify.ro",
+    "legal_info_url": "https://lightify.ro/legal"
+}

@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://lightify.ro/sitemap.xml
+Sitemap: https://lightify.ro/llms.txt

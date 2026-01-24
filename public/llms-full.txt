@@ -1,0 +1,27 @@
+# Lightify - Custom Neon Signs (Detailed)
+
+A modern website for a custom neon sign business built with Next.js and Tailwind CSS.
+
+## Features
+
+- Responsive design optimized for all devices.
+- Modern UI with dark theme and neon aesthetics.
+- Portfolio showcase with filtering options (Real-world examples of neon signs).
+- Contact form for direct quote requests.
+- About page covering the business story and values.
+
+## Technical Stack
+- Framework: Next.js (React)
+- Styling: Tailwind CSS
+- Icons: Heroicons
+
+## Site Map and Links
+- Homepage: https://lightify.ro/ - Features hero section, category links, and featured products.
+- Portfolio: https://lightify.ro/portofoliu-semne-neon - Gallery of neon sign projects.
+- Pricing: https://lightify.ro/preturi-neon-led - Comprehensive list of pricing for different neon sign sizes and types.
+- About: https://lightify.ro/despre-noi - Background information on Lightify.
+- Contact: https://lightify.ro/contact - Primary point for inquiries and orders.
+- Why Us: https://lightify.ro/de-ce-lightify - Highlights reliability, quality, and customization options.
+
+## Business Context
+Lightify aims to provide high-quality, energy-efficient neon signs using LED technology. They offer solutions for both commercial branding and home decor.
