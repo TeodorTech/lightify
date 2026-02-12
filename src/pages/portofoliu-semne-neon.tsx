@@ -6,8 +6,8 @@ import Layout from "../components/layout/Layout";
 const CATEGORIES = [
   { id: "toate", name: "Toate" },
   { id: "afaceri", name: "Afaceri" },
-  { id: "casă", name: "Casă" },
   { id: "eveniment", name: "Evenimente" },
+  { id: "casă", name: "Casă" },
 ];
 
 const portfolioItems = [
@@ -17,6 +17,21 @@ const portfolioItems = [
     description: "Întărește identitatea vizuală a brandului tău cu un logo neon premium, realizat manual pentru un impact vizual maxim.",
     category: "afaceri",
     imageUrl: "/images/jidvei.webp",
+  },
+  {
+    id: 14,
+    title: "Neon Majorat Celebration",
+    description: "Sărbătorește trecerea la majorat cu un decor spectaculos. Un semn neon care devine punctul de atracție al oricărei petreceri de 18 ani.",
+    category: "eveniment",
+    imageUrl: "/images/majoratWide.webp",
+  },
+
+  {
+    id: 13,
+    title: "Neon Torerro",
+    description: "Un design vibrant și plin de pasiune, creat special pentru a adăuga o notă de exclusivitate și energie oricărui club sau local.",
+    category: "afaceri",
+    imageUrl: "/images/torerro2.webp",
   },
   {
     id: 2,

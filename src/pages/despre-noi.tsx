@@ -156,7 +156,7 @@ export default function About() {
                   Contactează-ne acum
                 </Link>
                 <Link
-                  href="/portfolio"
+                  href="/portofoliu-semne-neon"
                   className="px-8 py-4 bg-black border border-white/20 text-white font-bold rounded-full hover:bg-white/5 transition-all"
                 >
                   Vezi portofoliul
