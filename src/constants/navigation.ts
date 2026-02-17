@@ -14,7 +14,7 @@ export const BRAND = {
         second: "IFY",
     },
     contact: {
-        email: "vanzari@lightify.ro",
+        email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "vanzari@lightify.ro",
         phone: "+40 723 185 255",
         address: "București, Sector 4, Str. Nitu vasile, Nr. 42",
     },
