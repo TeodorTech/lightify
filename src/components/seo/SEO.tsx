@@ -2,6 +2,11 @@ import React from "react";
 import Head from "next/head";
 import { BRAND } from "../../constants/navigation";
 
+interface FAQItem {
+    question: string;
+    answer: string;
+}
+
 interface SEOProps {
     title: string;
     description: string;
@@ -10,6 +15,8 @@ interface SEOProps {
     ogType?: string;
     ogImage?: string;
     twitterHandle?: string;
+    faqItems?: FAQItem[];
+    extraSchemas?: object[];
 }
 
 export default function SEO({
@@ -20,6 +27,8 @@ export default function SEO({
     ogType = "website",
     ogImage = "/images/og-image.jpg", // Default OG image
     twitterHandle = "@lightify_ro",
+    faqItems,
+    extraSchemas,
 }: SEOProps) {
     const siteName = "LIGHTIFY";
     const fullTitle = `${title} | ${siteName}`;
@@ -91,11 +100,41 @@ export default function SEO({
             <meta name="twitter:description" content={description} />
             <meta name="twitter:image" content={`${url}${ogImage}`} />
 
-            {/* Structured Data */}
+            {/* Structured Data — LocalBusiness */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
+
+            {/* Structured Data — FAQPage */}
+            {faqItems && faqItems.length > 0 && (
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "FAQPage",
+                            "mainEntity": faqItems.map((item) => ({
+                                "@type": "Question",
+                                "name": item.question,
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": item.answer,
+                                },
+                            })),
+                        }),
+                    }}
+                />
+            )}
+
+            {/* Structured Data — Extra schemas per page */}
+            {extraSchemas && extraSchemas.map((schema, idx) => (
+                <script
+                    key={idx}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+                />
+            ))}
         </Head>
     );
 }

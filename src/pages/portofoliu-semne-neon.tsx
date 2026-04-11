@@ -125,6 +125,24 @@ export default function Portfolio() {
       title="Portofoliu Semne Neon & Afișe Luminoase | Lightify București"
       description="Descoperă galeria noastră de semne neon personalizate, sigle luminoase și proiecte LED realizate de Lightify în București. Vezi cum am transformat branduri și evenimente."
       keywords="portofoliu neon, galerie semne neon, modele firme luminoase, exemple neon personalizat, poze afise led, proiecte lightify"
+      extraSchemas={[
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://lightify.ro/" },
+            { "@type": "ListItem", "position": 2, "name": "Portofoliu", "item": "https://lightify.ro/portofoliu-semne-neon" }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "ImageGallery",
+          "name": "Portofoliu Semne Neon Lightify",
+          "description": "Galerie de semne neon personalizate realizate de Lightify pentru afaceri, evenimente și decor interior în România.",
+          "url": "https://lightify.ro/portofoliu-semne-neon",
+          "provider": { "@type": "Organization", "name": "Lightify", "url": "https://lightify.ro" }
+        }
+      ]}
     >
       <div className="bg-black min-h-screen pt-32 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

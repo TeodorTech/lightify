@@ -11,6 +11,30 @@ export default function Contact() {
       title="Contact Lightify | Obține Oferta Ta Neon Personalizată"
       description="Începe proiectul tău neon astăzi. Primești consultanță gratuită și un mockup digital pentru semnul tău neon. Calitate premium, livrare rapidă în toată țara."
       keywords="contact lightify, oferta neon personalizat, mockup gratuit neon, preturi semne neon, comanda neon bucuresti"
+      extraSchemas={[
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://lightify.ro/" },
+            { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://lightify.ro/contact" }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Lightify",
+          "description": "Solicită o ofertă personalizată pentru semnul tău neon. Consultanță gratuită și simulare vizuală în 24 de ore.",
+          "url": "https://lightify.ro/contact",
+          "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "Lightify",
+            "telephone": "+40 723 185 255",
+            "email": "vanzari@lightify.ro",
+            "url": "https://lightify.ro"
+          }
+        }
+      ]}
     >
       <div className="bg-black min-h-screen pt-32 pb-24 selection:bg-pink-500/30 overflow-hidden relative">
         {/* Background Decorative Elements */}

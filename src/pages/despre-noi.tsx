@@ -48,6 +48,16 @@ export default function About() {
       title="Despre Lightify | Atelier Semne Neon & LED București"
       description="Povestea Lightify - Pasiune pentru neon și lumină. Află cum creăm manual cele mai bune semne neon și afișe luminoase din București, folosind tehnologie LED de ultimă generație."
       keywords="despre lightify, atelier neon bucuresti, producator reclame luminoase, echipa lightify, cine suntem, productie publicitara led"
+      extraSchemas={[
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://lightify.ro/" },
+            { "@type": "ListItem", "position": 2, "name": "Despre noi", "item": "https://lightify.ro/despre-noi" }
+          ]
+        }
+      ]}
     >
       <div className="bg-black text-white selection:bg-pink-500/30">
 

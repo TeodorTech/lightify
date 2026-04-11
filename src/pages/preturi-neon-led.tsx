@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Layout from "../components/layout/Layout";
+import FAQ from "../components/FAQ";
 
 const PRICING_TIERS = [
     {
@@ -47,6 +48,33 @@ const PRICING_TIERS = [
     }
 ];
 
+const PRICING_FAQ = [
+    {
+        question: "Cât costă un semn neon personalizat în România?",
+        answer: "Prețurile pornesc de la 550 RON pentru un text simplu (până la 8 caractere, max. 50cm lățime) și de la 1.000 RON pentru logo-uri sau designuri complexe. Proiectele mari sau instalațiile publicitare au prețul stabilit individual. Toate prețurile includ TVA."
+    },
+    {
+        question: "Ce este inclus în prețul unui semn neon Lightify?",
+        answer: "Prețul include designul personalizat, producția manuală, suportul din acril, transformatorul, cablurile de alimentare, accesoriile de montaj și livrarea prin curierat în toată România. Garanția de 24 luni este inclusă la toate produsele."
+    },
+    {
+        question: "Pot schimba culoarea semnului neon?",
+        answer: "Da, prin opțiunea RGB cu telecomandă poți schimba culoarea semnului oricând. Această opțiune se adaugă la prețul de bază și este disponibilă pentru orice model din gama noastră."
+    },
+    {
+        question: "Cât durează producția unui semn neon?",
+        answer: "Termenul standard de producție este de câteva zile lucrătoare, în funcție de complexitatea proiectului și volumul comenzilor. Vei primi o simulare vizuală gratuită și prețul final în maxim 24 de ore de la trimiterea cererii."
+    },
+    {
+        question: "Oferiți garanție pentru semnele neon?",
+        answer: "Da, toate produsele Lightify vin cu garanție de 24 de luni. Folosim LED neon flex de calitate superioară cu o durabilitate de peste 50.000 de ore de funcționare continuă."
+    },
+    {
+        question: "Livrați semne neon în toată România?",
+        answer: "Da, livrăm prin curierat rapid în toată România. Produsul este ambalat securizat pentru transport, cu toate accesoriile de instalare incluse."
+    },
+];
+
 const PRICE_FACTORS = [
     {
         title: "Dimensiunea",
@@ -66,12 +94,87 @@ const PRICE_FACTORS = [
     }
 ];
 
+const PRICING_SCHEMAS: object[] = [
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://lightify.ro/" },
+            { "@type": "ListItem", "position": 2, "name": "Prețuri", "item": "https://lightify.ro/preturi-neon-led" }
+        ]
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Neon Text Standard",
+        "description": "Semn neon personalizat cu text simplu — ideal pentru nume, citate scurte sau cuvinte inspiraționale. Până la 8 caractere, lățime max. 50cm. Font și culoare la alegere.",
+        "brand": { "@type": "Brand", "name": "Lightify" },
+        "category": "Semne neon personalizate",
+        "url": "https://lightify.ro/preturi-neon-led",
+        "offers": {
+            "@type": "Offer",
+            "price": "550",
+            "priceCurrency": "RON",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "seller": { "@type": "Organization", "name": "Lightify", "url": "https://lightify.ro" }
+        },
+        "additionalProperty": [
+            { "@type": "PropertyValue", "name": "Garanție", "value": "24 luni" },
+            { "@type": "PropertyValue", "name": "Tehnologie", "value": "LED neon flex" },
+            { "@type": "PropertyValue", "name": "Durabilitate", "value": "50.000+ ore" }
+        ]
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Logo Neon & Premium",
+        "description": "Logo-ul afacerii tale sau orice design complex transformat în semn neon spectaculos. Include consultanță design 1-la-1 și opțiune RGB cu telecomandă.",
+        "brand": { "@type": "Brand", "name": "Lightify" },
+        "category": "Semne neon personalizate",
+        "url": "https://lightify.ro/preturi-neon-led",
+        "offers": {
+            "@type": "Offer",
+            "price": "1000",
+            "priceCurrency": "RON",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "seller": { "@type": "Organization", "name": "Lightify", "url": "https://lightify.ro" }
+        },
+        "additionalProperty": [
+            { "@type": "PropertyValue", "name": "Garanție", "value": "24 luni" },
+            { "@type": "PropertyValue", "name": "Tehnologie", "value": "LED neon flex" },
+            { "@type": "PropertyValue", "name": "Opțiune RGB", "value": "Disponibilă" }
+        ]
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Proiecte Exclusive Neon",
+        "description": "Instalații neon de mari dimensiuni, panouri publicitare, reclame luminoase exterioare sau concepte artistice unice. Dimensiuni nelimitate, consultanță dedicată, mentenanță prioritară.",
+        "brand": { "@type": "Brand", "name": "Lightify" },
+        "category": "Reclame luminoase și instalații neon",
+        "url": "https://lightify.ro/preturi-neon-led",
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "seller": { "@type": "Organization", "name": "Lightify", "url": "https://lightify.ro" }
+        },
+        "additionalProperty": [
+            { "@type": "PropertyValue", "name": "Garanție", "value": "24 luni" },
+            { "@type": "PropertyValue", "name": "Mentenanță", "value": "Prioritară" }
+        ]
+    }
+];
+
 export default function Pricing() {
     return (
         <Layout
             title="Prețuri Semne Neon Personalizate | Afișe Luminoase LED | Lightify"
             description="Vezi prețurile pentru semne neon personalizate și afișe luminoase LED în București. Oferte transparente pentru logo-uri neon, texte luminoase și proiecte speciale de la Lightify."
             keywords="preturi neon personalizat, cost firma luminoasa, pret afis led, oferta semne neon, neon ieftin bucuresti, pret logo neon"
+            faqItems={PRICING_FAQ}
+            extraSchemas={PRICING_SCHEMAS}
         >
             <div className="bg-black text-white selection:bg-pink-500/30">
 
@@ -198,6 +301,13 @@ export default function Pricing() {
                         </div>
                     </div>
                 </section>
+
+                {/* FAQ Section */}
+                <FAQ
+                    items={PRICING_FAQ}
+                    title="Întrebări despre prețuri"
+                    subtitle="Tot ce trebuie să știi înainte să comanzi semnul tău neon."
+                />
 
                 {/* Interactive CTA */}
                 <section className="py-32 relative overflow-hidden">

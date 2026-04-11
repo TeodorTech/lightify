@@ -2,6 +2,94 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/layout/Layout";
+import FAQ from "../components/FAQ";
+
+const HOME_FAQ = [
+  {
+    question: "Ce este un semn neon personalizat?",
+    answer: "Un semn neon personalizat este o piesă luminoasă realizată manual, în care orice text, nume, logo sau formă este redată prin LED neon flex montat pe un suport din acril. Lightify produce semne neon la comandă pentru afaceri, evenimente și decor interior."
+  },
+  {
+    question: "Unde pot comanda un semn neon personalizat în România?",
+    answer: "Lightify este un producător de semne neon personalizate cu sediul în București, Sector 4. Puteți comanda online prin formularul de contact de pe lightify.ro sau ne puteți contacta direct la +40 723 185 255. Livrăm în toată România prin curierat rapid."
+  },
+  {
+    question: "Cât costă un semn neon personalizat?",
+    answer: "Prețurile pornesc de la 550 RON pentru un text simplu și de la 1.000 RON pentru logo-uri sau designuri complexe. Trimiteți-ne ideea și primiți o simulare vizuală gratuită și un preț exact în 24 de ore."
+  },
+  {
+    question: "Livrați semne neon în afara Bucureștiului?",
+    answer: "Da, livrăm prin curierat rapid în toată România. Produsul este ambalat securizat pentru transport și vine complet cu accesoriile de instalare incluse."
+  },
+  {
+    question: "Cât durează realizarea unui semn neon?",
+    answer: "Fiecare semn este realizat manual în atelierul nostru din București. Termenul de producție este de câteva zile lucrătoare, în funcție de complexitatea proiectului. Vei fi informat în orice moment despre statusul comenzii tale."
+  },
+];
+
+const HOME_SCHEMAS: object[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://lightify.ro/" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Lightify",
+    "legalName": "Lightify",
+    "url": "https://lightify.ro",
+    "logo": "https://lightify.ro/icon-512.png",
+    "description": "Lightify este un producător român de semne neon personalizate cu sediul în București. Creăm manual semne neon LED pentru afaceri, evenimente și decor interior, livrând în toată România.",
+    "foundingLocation": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "București",
+        "addressCountry": "RO"
+      }
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+40 723 185 255",
+      "contactType": "sales",
+      "email": "vanzari@lightify.ro",
+      "areaServed": "RO",
+      "availableLanguage": "Romanian"
+    },
+    "sameAs": [
+      "https://www.instagram.com/lightify_ro/",
+      "https://www.facebook.com/lightify.ro"
+    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Romania"
+    },
+    "knowsAbout": [
+      "Semne neon personalizate",
+      "LED neon flex",
+      "Reclame luminoase",
+      "Firme luminoase",
+      "Decorațiuni neon",
+      "Logo neon"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Lightify",
+    "url": "https://lightify.ro",
+    "description": "Producător de semne neon personalizate în România — afaceri, evenimente și decor",
+    "inLanguage": "ro",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://lightify.ro/portofoliu-semne-neon",
+      "query-input": "required name=search_term_string"
+    }
+  }
+];
 
 const FEATURED_ITEMS = [
   {
@@ -33,6 +121,8 @@ export default function Home() {
       title="Neon Personalizat București | Lightify - Semne Neon, Afișe Luminoase, LED"
       description="Lightify bucuresti: semne neon personalizate, afișe luminoase și reclame LED premium. Producție locală pentru afaceri, evenimente și decor. Îți aducem viziunea la lumină!"
       keywords="neon bucuresti, semne neon, afis luminos, led, reclame luminoase, firme luminoase, neon personalizat, lightify, decoratiuni neon"
+      faqItems={HOME_FAQ}
+      extraSchemas={HOME_SCHEMAS}
     >
       {/* Hero Section */}
       <section className="relative h-screen flex items-center overflow-hidden">
@@ -211,6 +301,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ
+        items={HOME_FAQ}
+        title="Întrebări frecvente"
+        subtitle="Tot ce trebuie să știi despre semnele neon personalizate Lightify."
+      />
 
       {/* CTA Section */}
       <section className="relative py-24 sm:py-32 overflow-hidden">

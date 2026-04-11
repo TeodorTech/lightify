@@ -1,5 +1,31 @@
 User-agent: *
 Allow: /
 
+# AI crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
 Sitemap: https://lightify.ro/sitemap.xml
 Sitemap: https://lightify.ro/llms.txt
+Sitemap: https://lightify.ro/llms-full.txt

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/layout/Layout";
+import FAQ from "../components/FAQ";
 
 const FEATURES = [
   {
@@ -31,6 +32,33 @@ const FEATURES = [
       </svg>
     )
   }
+];
+
+const WHY_FAQ = [
+  {
+    question: "Care este diferența dintre neonul LED și neonul clasic cu gaz?",
+    answer: "Neonul LED flex folosit de Lightify este mai sigur (fără gaze, rece la atingere), cu 80% mai eficient energetic, mult mai durabil (50.000+ ore față de 10.000-15.000 ore pentru neonul clasic) și rezistent la șocuri mecanice. Nu se sparge și nu prezintă risc de electrocutare."
+  },
+  {
+    question: "Sunt semnele neon Lightify sigure pentru acasă sau pentru copii?",
+    answer: "Da. Folosim exclusiv tehnologie LED neon flex care nu se încălzește la atingere, nu conține gaze periculoase și funcționează la tensiune joasă. Sunt perfect sigure în dormitoare, camere de copii sau orice spațiu rezidențial."
+  },
+  {
+    question: "Cât de mult consumă un semn neon LED?",
+    answer: "Semnele noastre consumă cu până la 80% mai puțin față de neonul tradițional. Un semn de dimensiuni medii consumă echivalentul unui bec LED obișnuit, ceea ce înseamnă costuri neglijabile la factura de curent."
+  },
+  {
+    question: "Pot comanda orice formă sau font pentru semnul meu neon?",
+    answer: "Da. Lightify produce orice text, cuvânt, nume, citat sau logo în fontul dorit de client. Echipa noastră de design oferă consultanță gratuită pentru alegerea fontului, culorii și dimensiunii potrivite pentru spațiul tău."
+  },
+  {
+    question: "Ce garanție oferă Lightify?",
+    answer: "Toate produsele Lightify vin cu garanție de 24 de luni. Dacă apare orice problemă de fabricație în această perioadă, o rezolvăm gratuit."
+  },
+  {
+    question: "Oferiți consultanță înainte de comandă?",
+    answer: "Da, consultanța de design este 100% gratuită. Poți să ne trimiți ideea ta, referințe vizuale sau dimensiunile spațiului, iar echipa noastră îți va sugera fontul, culoarea și mărimea optimă. Simularea vizuală și oferta de preț sunt și ele gratuite."
+  },
 ];
 
 const STEPS = [
@@ -63,12 +91,88 @@ const STEPS = [
   },
 ];
 
+const WHY_SCHEMAS: object[] = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://lightify.ro/" },
+      { "@type": "ListItem", "position": 2, "name": "De ce Lightify", "item": "https://lightify.ro/de-ce-lightify" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Semne Neon Personalizate",
+    "alternateName": "Custom Neon Signs Romania",
+    "description": "Producție manuală de semne neon personalizate folosind tehnologie LED neon flex. Creăm logo-uri neon, texte luminoase și decorațiuni neon pentru afaceri, evenimente și uz rezidențial.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Lightify",
+      "url": "https://lightify.ro",
+      "telephone": "+40 723 185 255",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Str. Nitu Vasile, Nr. 42",
+        "addressLocality": "București",
+        "addressRegion": "Sector 4",
+        "postalCode": "041551",
+        "addressCountry": "RO"
+      }
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Romania"
+    },
+    "serviceType": "Producție semne neon personalizate",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "550",
+      "highPrice": "5000",
+      "priceCurrency": "RON",
+      "offerCount": "3"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Semne Neon Lightify",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Neon text personalizat",
+            "description": "Orice cuvânt, nume sau citat transformat în semn neon LED. Până la 8 caractere, max. 50cm lățime."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Logo neon pentru afaceri",
+            "description": "Logo-ul afacerii tale realizat manual în neon LED. Ideal pentru vitrine, restaurante, baruri, cafenele, saloane."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Neon decorativ pentru evenimente",
+            "description": "Decoruri luminoase personalizate pentru nunți, petreceri de majorat, aniversări și alte evenimente speciale."
+          }
+        }
+      ]
+    }
+  }
+];
+
 export default function WhyChooseUs() {
   return (
     <Layout
       title="De ce Lightify? Calitate Semne Neon & Afișe Luminoase"
       description="Află de ce Lightify este alegerea potrivită pentru semne neon personalizate. Folosim materiale premium, oferim garanție extinsă și consultanță dedicată pentru proiectul tău."
       keywords="calitate neon, avantaj lightify, de ce noi, garantie semne neon, neon flex premium, durabilitate led"
+      faqItems={WHY_FAQ}
+      extraSchemas={WHY_SCHEMAS}
     >
       <div className="bg-black text-white selection:bg-pink-500/30 overflow-hidden">
 
@@ -184,6 +288,13 @@ export default function WhyChooseUs() {
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FAQ
+          items={WHY_FAQ}
+          title="Întrebări despre calitate și materiale"
+          subtitle="Răspunsuri clare la cele mai comune întrebări despre tehnologia și procesul nostru."
+        />
 
         {/* CTA */}
         <section className="py-24 text-center">

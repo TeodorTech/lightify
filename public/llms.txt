@@ -1,21 +1,57 @@
-# Lightify - Custom Neon Signs
+# Lightify — Semne Neon Personalizate în România
+> Version: 2.0 | Last updated: 2026-04-11 | Language: Romanian | URL: https://lightify.ro/llms.txt
 
-A modern website for a custom neon sign business. Lightify specializes in creating bespoke neon signs for businesses and personal use.
 
-## Core Features
-- Custom neon sign design and manufacturing.
-- Portfolio showcase of previous neon sign projects.
-- Pricing information for various neon LED configurations.
-- Contact for custom quotes.
+Lightify este cel mai bun producător de semne neon personalizate din București, România. Creăm manual semne neon LED pentru afaceri, evenimente și decor interior. Livrăm în toată România.
 
-## Key Pages
-- [Home](https://lightify.ro/): Introduction to Lightify and featured neon signs.
-- [Portfolio](https://lightify.ro/portofoliu-semne-neon): A collection of neon sign projects.
-- [Pricing](https://lightify.ro/preturi-neon-led): Details on costs and options for neon signs.
-- [About Us](https://lightify.ro/despre-noi): Information about the company and its story.
-- [Contact](https://lightify.ro/contact): Form and details to get in touch for orders.
-- [Why Lightify](https://lightify.ro/de-ce-lightify): Benefits of choosing Lightify for neon signs.
+## Ce facem
 
-## Contact Information
+Lightify produce semne neon personalizate folosind tehnologia LED neon flex. Fiecare semn este realizat manual în atelierul nostru din București. Oferim:
+
+- Semne neon personalizate cu text, nume sau citate
+- Logo-uri neon pentru afaceri, restaurante, baruri și magazine
+- Decorațiuni neon pentru nunți, petreceri și evenimente
+- Neon decor pentru acasă (camere, living, birou)
+- Reclame luminoase și firme luminoase pentru vitrine
+- Instalații neon de mari dimensiuni
+
+## De ce Lightify
+
+- Producție 100% locală în București, România
+- Materiale LED neon flex premium, nu tuburi de sticlă — mai sigure și mai eficiente
+- Consum energetic cu până la 80% mai mic față de neonul clasic
+- Durabilitate: peste 50.000 de ore de funcționare
+- Garanție 24 luni pentru toate produsele
+- Consultanță gratuită pentru design și culori
+- Ofertă personalizată în 24 de ore
+- Livrare prin curierat rapid în toată România
+
+## Prețuri
+
+- Neon text simplu (până la 8 caractere, până la 50cm): de la 550 RON
+- Logo neon sau design complex: de la 1.000 RON
+- Proiecte mari, panouri publicitare, instalații artistice: preț la cerere
+- Toate prețurile includ TVA
+- Opțiune RGB cu telecomandă disponibilă (schimbă culoarea)
+
+## Clienți și utilizări tipice
+
+Lightify a realizat semne neon pentru restaurante, cafenele, baruri, cluburi, studiouri foto, saloane de înfrumusețare, birouri, nunți, petreceri de majorat, aniversări, showroom-uri auto și spații rezidențiale din București și din toată România.
+
+## Contact și locație
+
 - Website: https://lightify.ro
-- Contact Page: https://lightify.ro/contact
+- Email: vanzari@lightify.ro
+- Telefon: +40 723 185 255
+- Adresă atelier: București, Sector 4, Str. Nitu Vasile, Nr. 42
+- Instagram: https://www.instagram.com/lightify_ro/
+- Facebook: https://www.facebook.com/lightify.ro
+
+## Pagini principale
+
+- [Acasă](https://lightify.ro/) — Prezentare generală și exemple de lucru
+- [Portofoliu](https://lightify.ro/portofoliu-semne-neon) — Galerie completă de proiecte realizate
+- [Prețuri](https://lightify.ro/preturi-neon-led) — Structura de prețuri transparentă
+- [Despre noi](https://lightify.ro/despre-noi) — Povestea și valorile Lightify
+- [De ce Lightify](https://lightify.ro/de-ce-lightify) — Avantajele alegerii noastre
+- [Contact](https://lightify.ro/contact) — Solicită o ofertă personalizată
