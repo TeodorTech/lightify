@@ -110,6 +110,28 @@ const portfolioItems = [
     category: "afaceri",
     imageUrl: "/images/on-air.webp",
   },
+  {
+    id: 15,
+    title: "Neon Love People",
+    description: "Un mesaj cald și luminos pentru spațiul tău personal, perfect pentru a adăuga căldură și personalitate oricărui colț de acasă.",
+    category: "casă",
+    imageUrl: "/images/lovePeople.webp",
+  },
+  {
+    id: 16,
+    title: "Neon Pull Up",
+    description: "Design îndrăzneț și energic, creat pentru afaceri care vor să transmită forță și dinamism prin identitatea lor vizuală.",
+    category: "afaceri",
+    imageUrl: "/images/pullUp.webp",
+  },
+  {
+    id: 17,
+    title: "Neon Pizza Al Taglio",
+    description: "Semn neon cu personalitate pentru restaurante și localuri cu specific italian, care atrage clienți și creează o atmosferă autentică.",
+    category: "afaceri",
+    imageUrl: "/images/pizzaAlTaglio.webp",
+    objectFit: "contain" as const,
+  },
 ];
 
 export default function Portfolio() {
@@ -186,7 +208,7 @@ export default function Portfolio() {
                     src={item.imageUrl}
                     alt={item.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className={`${item.objectFit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-700 group-hover:scale-110`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity" />
 
