@@ -25,7 +25,7 @@ export default function SEO({
     keywords,
     canonical,
     ogType = "website",
-    ogImage = "/images/og-image.jpg", // Default OG image
+    ogImage = "/images/lightify.webp", // Default OG image
     twitterHandle = "@lightify_ro",
     faqItems,
     extraSchemas,

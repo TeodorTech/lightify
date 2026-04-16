@@ -108,6 +108,7 @@ const PRICING_SCHEMAS: object[] = [
         "@type": "Product",
         "name": "Neon Text Standard",
         "description": "Semn neon personalizat cu text simplu — ideal pentru nume, citate scurte sau cuvinte inspiraționale. Până la 8 caractere, lățime max. 50cm. Font și culoare la alegere.",
+        "image": "https://lightify.ro/images/on-air.webp",
         "brand": { "@type": "Brand", "name": "Lightify" },
         "category": "Semne neon personalizate",
         "url": "https://lightify.ro/preturi-neon-led",
@@ -130,6 +131,7 @@ const PRICING_SCHEMAS: object[] = [
         "@type": "Product",
         "name": "Logo Neon & Premium",
         "description": "Logo-ul afacerii tale sau orice design complex transformat în semn neon spectaculos. Include consultanță design 1-la-1 și opțiune RGB cu telecomandă.",
+        "image": "https://lightify.ro/images/torerro2.webp",
         "brand": { "@type": "Brand", "name": "Lightify" },
         "category": "Semne neon personalizate",
         "url": "https://lightify.ro/preturi-neon-led",
@@ -152,11 +154,17 @@ const PRICING_SCHEMAS: object[] = [
         "@type": "Product",
         "name": "Proiecte Exclusive Neon",
         "description": "Instalații neon de mari dimensiuni, panouri publicitare, reclame luminoase exterioare sau concepte artistice unice. Dimensiuni nelimitate, consultanță dedicată, mentenanță prioritară.",
+        "image": "https://lightify.ro/images/jidvei.webp",
         "brand": { "@type": "Brand", "name": "Lightify" },
         "category": "Reclame luminoase și instalații neon",
         "url": "https://lightify.ro/preturi-neon-led",
         "offers": {
             "@type": "Offer",
+            "priceSpecification": {
+                "@type": "PriceSpecification",
+                "priceCurrency": "RON",
+                "description": "Preț la cerere, în funcție de dimensiuni și complexitate"
+            },
             "availability": "https://schema.org/InStock",
             "seller": { "@type": "Organization", "name": "Lightify", "url": "https://lightify.ro" }
         },

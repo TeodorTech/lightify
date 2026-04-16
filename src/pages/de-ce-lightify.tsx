@@ -138,6 +138,8 @@ const WHY_SCHEMAS: object[] = [
       "itemListElement": [
         {
           "@type": "Offer",
+          "price": "550",
+          "priceCurrency": "RON",
           "itemOffered": {
             "@type": "Service",
             "name": "Neon text personalizat",
@@ -146,6 +148,8 @@ const WHY_SCHEMAS: object[] = [
         },
         {
           "@type": "Offer",
+          "price": "1000",
+          "priceCurrency": "RON",
           "itemOffered": {
             "@type": "Service",
             "name": "Logo neon pentru afaceri",
@@ -154,6 +158,8 @@ const WHY_SCHEMAS: object[] = [
         },
         {
           "@type": "Offer",
+          "price": "550",
+          "priceCurrency": "RON",
           "itemOffered": {
             "@type": "Service",
             "name": "Neon decorativ pentru evenimente",
