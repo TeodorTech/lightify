@@ -159,12 +159,10 @@ const PRICING_SCHEMAS: object[] = [
         "category": "Reclame luminoase și instalații neon",
         "url": "https://lightify.ro/preturi-neon-led",
         "offers": {
-            "@type": "Offer",
-            "priceSpecification": {
-                "@type": "PriceSpecification",
-                "priceCurrency": "RON",
-                "description": "Preț la cerere, în funcție de dimensiuni și complexitate"
-            },
+            "@type": "AggregateOffer",
+            "lowPrice": "1500",
+            "priceCurrency": "RON",
+            "offerCount": "1",
             "availability": "https://schema.org/InStock",
             "seller": { "@type": "Organization", "name": "Lightify", "url": "https://lightify.ro" }
         },
