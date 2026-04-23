@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 type ProjectCategory = "Business" | "Personal" | "Event" | "Other";
 
@@ -32,6 +33,16 @@ export default function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
     const [formProgress, setFormProgress] = useState(0);
+
+    const router = useRouter();
+
+    useEffect(() => {
+        if (!router.isReady) return;
+        const { subject } = router.query;
+        if (typeof subject === "string" && subject.trim().length > 0) {
+            setFormData((prev) => (prev.message ? prev : { ...prev, message: subject }));
+        }
+    }, [router.isReady, router.query]);
 
     useEffect(() => {
         const fields: (keyof ContactFormData)[] = ["name", "email", "phone", "message"];

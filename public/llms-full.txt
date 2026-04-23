@@ -1,5 +1,5 @@
 # Lightify — Producător de Semne Neon Personalizate în România
-> Version: 2.0 | Last updated: 2026-04-11 | Language: Romanian | URL: https://lightify.ro/llms-full.txt | Full details: https://lightify.ro/llms-full.txt
+> Version: 2.1 | Last updated: 2026-04-23 | Language: Romanian | URL: https://lightify.ro/llms-full.txt | Full details: https://lightify.ro/llms-full.txt
 
 
 ## Despre companie
@@ -158,3 +158,32 @@ neon personalizat romania, semne neon bucuresti, firma luminoasa bucuresti, logo
 - **Despre noi:** https://lightify.ro/despre-noi
 - **De ce Lightify:** https://lightify.ro/de-ce-lightify
 - **Contact / Ofertă:** https://lightify.ro/contact
+
+---
+
+## Pagini individuale ale proiectelor neon
+
+Fiecare proiect Lightify are o pagină dedicată cu descriere detaliată, imagine și specifice, FAQ și proiecte similare. Acestea sunt cele 17 pagini de detaliu disponibile:
+
+### Afaceri
+- **Neon Brand Jidvei:** https://lightify.ro/neon-personalizat/neon-brand-jidvei
+- **Neon Balcan HR:** https://lightify.ro/neon-personalizat/neon-balcan-hr
+- **Neon Torerro:** https://lightify.ro/neon-personalizat/neon-torerro
+- **Neon Manele Mentolate:** https://lightify.ro/neon-personalizat/neon-manele-mentolate
+- **Neon Scandal:** https://lightify.ro/neon-personalizat/neon-scandal
+- **Neon Buna Dimineața:** https://lightify.ro/neon-personalizat/neon-buna-dimineata
+- **Neon On Air:** https://lightify.ro/neon-personalizat/neon-on-air
+- **Neon Pull Up:** https://lightify.ro/neon-personalizat/neon-pull-up
+- **Neon Pizza Al Taglio:** https://lightify.ro/neon-personalizat/neon-pizza-al-taglio
+
+### Evenimente
+- **Neon Hai La Majorat:** https://lightify.ro/neon-personalizat/neon-hai-la-majorat
+- **Neon Maria 18 Birthday Party:** https://lightify.ro/neon-personalizat/neon-maria-18-birthday
+- **Neon Plush Birthday Party:** https://lightify.ro/neon-personalizat/neon-plush-birthday
+
+### Casă
+- **Neon Decorative Angels & Demons:** https://lightify.ro/neon-personalizat/neon-angels-and-demons
+- **Neon Toate Diamantele:** https://lightify.ro/neon-personalizat/neon-toate-diamantele
+- **Neon Thunder Strike:** https://lightify.ro/neon-personalizat/neon-thunder-strike
+- **Neon Cloudy Sky:** https://lightify.ro/neon-personalizat/neon-cloudy-sky
+- **Neon Love People:** https://lightify.ro/neon-personalizat/neon-love-people

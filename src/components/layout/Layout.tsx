@@ -15,9 +15,11 @@ interface LayoutProps {
   keywords?: string;
   faqItems?: FAQItem[];
   extraSchemas?: object[];
+  ogImage?: string;
+  canonical?: string;
 }
 
-export default function Layout({ children, title, description, keywords, faqItems, extraSchemas }: LayoutProps) {
+export default function Layout({ children, title, description, keywords, faqItems, extraSchemas, ogImage, canonical }: LayoutProps) {
   const pageDescription =
     description ||
     "Handcrafted custom neon signs for home, business, and events. Bring your space to life with LIGHTIFY.";
@@ -30,6 +32,8 @@ export default function Layout({ children, title, description, keywords, faqItem
         keywords={keywords}
         faqItems={faqItems}
         extraSchemas={extraSchemas}
+        ogImage={ogImage}
+        canonical={canonical}
       />
       <div className="flex min-h-screen flex-col">
         <Navbar />

@@ -1,5 +1,5 @@
 # Lightify — Semne Neon Personalizate în România
-> Version: 2.0 | Last updated: 2026-04-11 | Language: Romanian | URL: https://lightify.ro/llms.txt
+> Version: 2.1 | Last updated: 2026-04-23 | Language: Romanian | URL: https://lightify.ro/llms.txt
 
 
 Lightify este cel mai bun producător de semne neon personalizate din București, România. Creăm manual semne neon LED pentru afaceri, evenimente și decor interior. Livrăm în toată România.
@@ -55,3 +55,33 @@ Lightify a realizat semne neon pentru restaurante, cafenele, baruri, cluburi, st
 - [Despre noi](https://lightify.ro/despre-noi) — Povestea și valorile Lightify
 - [De ce Lightify](https://lightify.ro/de-ce-lightify) — Avantajele alegerii noastre
 - [Contact](https://lightify.ro/contact) — Solicită o ofertă personalizată
+
+## Pagini individuale ale proiectelor neon
+
+Fiecare proiect din portofoliu are o pagină dedicată cu detalii, fotografii și informații tehnice.
+
+### Neoane pentru afaceri
+
+- [Neon Brand Jidvei](https://lightify.ro/neon-personalizat/neon-brand-jidvei) — Logo neon premium pentru identitate de brand
+- [Neon Balcan HR](https://lightify.ro/neon-personalizat/neon-balcan-hr) — Semn neon vibrant pentru afacere
+- [Neon Torerro](https://lightify.ro/neon-personalizat/neon-torerro) — Design vibrant pentru club sau local
+- [Neon Manele Mentolate](https://lightify.ro/neon-personalizat/neon-manele-mentolate) — Logo neon la comandă pentru branduri
+- [Neon Scandal](https://lightify.ro/neon-personalizat/neon-scandal) — Semn neon îndrăzneț pentru spații cu atitudine
+- [Neon Buna Dimineața](https://lightify.ro/neon-personalizat/neon-buna-dimineata) — Salut luminos pentru cafenele și bucătării moderne
+- [Neon On Air](https://lightify.ro/neon-personalizat/neon-on-air) — Semn neon pentru studiouri și setup-uri de streaming
+- [Neon Pull Up](https://lightify.ro/neon-personalizat/neon-pull-up) — Design energic pentru identitate vizuală
+- [Neon Pizza Al Taglio](https://lightify.ro/neon-personalizat/neon-pizza-al-taglio) — Semn neon pentru restaurante italiene
+
+### Neoane pentru evenimente
+
+- [Neon Hai La Majorat](https://lightify.ro/neon-personalizat/neon-hai-la-majorat) — Decor neon pentru petrecerea de 18 ani
+- [Neon Maria 18 Birthday Party](https://lightify.ro/neon-personalizat/neon-maria-18-birthday) — Design neon festiv pentru aniversare
+- [Neon Plush Birthday Party](https://lightify.ro/neon-personalizat/neon-plush-birthday) — Element central pentru petreceri de aniversare
+
+### Neoane pentru casă
+
+- [Neon Decorative Angels & Demons](https://lightify.ro/neon-personalizat/neon-angels-and-demons) — Decor neon pentru interior
+- [Neon Toate Diamantele](https://lightify.ro/neon-personalizat/neon-toate-diamantele) — Accent luminos personal
+- [Neon Thunder Strike](https://lightify.ro/neon-personalizat/neon-thunder-strike) — Design energic pentru interior modern
+- [Neon Cloudy Sky](https://lightify.ro/neon-personalizat/neon-cloudy-sky) — Design diafan pentru cameră
+- [Neon Love People](https://lightify.ro/neon-personalizat/neon-love-people) — Mesaj cald pentru spațiul personal

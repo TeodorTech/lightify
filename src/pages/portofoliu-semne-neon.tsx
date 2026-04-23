@@ -2,136 +2,13 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/layout/Layout";
+import { portfolioItems } from "../constants/portfolio";
 
 const CATEGORIES = [
   { id: "toate", name: "Toate" },
   { id: "afaceri", name: "Afaceri" },
   { id: "eveniment", name: "Evenimente" },
   { id: "casă", name: "Casă" },
-];
-
-const portfolioItems = [
-  {
-    id: 1,
-    title: "Neon Brand Jidvei",
-    description: "Întărește identitatea vizuală a brandului tău cu un logo neon premium, realizat manual pentru un impact vizual maxim.",
-    category: "afaceri",
-    imageUrl: "/images/jidvei.webp",
-  },
-  {
-    id: 14,
-    title: "Neon Majorat Celebration",
-    description: "Sărbătorește trecerea la majorat cu un decor spectaculos. Un semn neon care devine punctul de atracție al oricărei petreceri de 18 ani.",
-    category: "eveniment",
-    imageUrl: "/images/majoratWide.webp",
-  },
-
-  {
-    id: 13,
-    title: "Neon Torerro",
-    description: "Un design vibrant și plin de pasiune, creat special pentru a adăuga o notă de exclusivitate și energie oricărui club sau local.",
-    category: "afaceri",
-    imageUrl: "/images/torerro2.webp",
-  },
-  {
-    id: 2,
-    title: "Neon Balcan HR",
-    description: "Transformă imaginea afacerii tale cu un semn neon vibrant care atrage privirile și creează o identitate memorabilă.",
-    category: "afaceri",
-    imageUrl: "/images/balcan.jpg",
-  },
-  {
-    id: 3,
-    title: "Neon Maria 18 Birthday Party",
-    description: "Adaugă un strop de magie petrecerii de zi de naștere cu un design neon festiv și plin de culoare.",
-    category: "eveniment",
-    imageUrl: "/images/maria18.jpeg",
-  },
-  {
-    id: 4,
-    title: "Neon Manele Mentolate",
-    description: "Logo-uri neon realizate la comandă pentru branduri care vor să iasă în evidență într-un mod spectaculos.",
-    category: "afaceri",
-    imageUrl: "/images/maneleMentolate.jpg",
-  },
-  {
-    id: 5,
-    title: "Neon Plush Birthday Party",
-    description: "Un element central perfect pentru orice aniversare, aducând lumină și bucurie momentelor speciale.",
-    category: "eveniment",
-    imageUrl: "/images/plushBday.webp",
-  },
-  {
-    id: 6,
-    title: "Neon Decorative Angels & Demons",
-    description: "Îmbunătățește atmosfera de lucru cu elemente decorative din neon care inspiră creativitate și profesionalism.",
-    category: "casă",
-    imageUrl: "/images/hearts.jpeg",
-  },
-  {
-    id: 7,
-    title: "Neon Toate Diamantele",
-    description: "Personalizează-ți spațiul personal cu un accent luminos care reflectă stilul și personalitatea ta.",
-    category: "casă",
-    imageUrl: "/images/diamente.webp",
-  },
-  {
-    id: 8,
-    title: "Neon Thunder Strike",
-    description: "O explozie de energie capturată în neon, perfectă pentru a adăuga un look electrizant oricărui interior modern.",
-    category: "casă",
-    imageUrl: "/images/thunder.webp",
-  },
-  {
-    id: 9,
-    title: "Neon Scandal",
-    description: "Îndrăzneț și provocator, acest semn neon este creat special pentru spații care vor să iasă în evidență prin atitudine.",
-    category: "afaceri",
-    imageUrl: "/images/scandal.webp",
-  },
-  {
-    id: 10,
-    title: "Neon Cloudy Sky",
-    description: "Adu liniștea și magia unui cer înnoptat direct în camera ta cu un design diafan și relaxant.",
-    category: "casă",
-    imageUrl: "/images/cloud.webp",
-  },
-  {
-    id: 11,
-    title: "Neon Buna Dimineața",
-    description: "Adu un zâmbet pe buzele oricui cu un salut luminos și primitor, perfect pentru cafenele sau bucătării moderne.",
-    category: "afaceri",
-    imageUrl: "/images/buna.webp",
-  },
-  {
-    id: 12,
-    title: "Neon On Air",
-    description: "Ideal pentru studiouri, vloggeri sau pasionați de broadcasting, acest semn adaugă un aer profesional oricărui setup de streaming.",
-    category: "afaceri",
-    imageUrl: "/images/on-air.webp",
-  },
-  {
-    id: 15,
-    title: "Neon Love People",
-    description: "Un mesaj cald și luminos pentru spațiul tău personal, perfect pentru a adăuga căldură și personalitate oricărui colț de acasă.",
-    category: "casă",
-    imageUrl: "/images/lovePeople.webp",
-  },
-  {
-    id: 16,
-    title: "Neon Pull Up",
-    description: "Design îndrăzneț și energic, creat pentru afaceri care vor să transmită forță și dinamism prin identitatea lor vizuală.",
-    category: "afaceri",
-    imageUrl: "/images/pullUp.webp",
-  },
-  {
-    id: 17,
-    title: "Neon Pizza Al Taglio",
-    description: "Semn neon cu personalitate pentru restaurante și localuri cu specific italian, care atrage clienți și creează o atmosferă autentică.",
-    category: "afaceri",
-    imageUrl: "/images/pizzaAlTaglio.webp",
-    objectFit: "contain" as const,
-  },
 ];
 
 export default function Portfolio() {
@@ -198,35 +75,45 @@ export default function Portfolio() {
           {/* Grid */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {filteredItems.map((item, idx) => (
-              <article
+              <Link
                 key={item.id}
-                className="group relative flex flex-col glass-card rounded-3xl overflow-hidden hover:border-pink-500/30 transition-all duration-500 animate-in fade-in slide-in-from-bottom-4"
+                href={`/neon-personalizat/${item.slug}`}
+                className="group relative flex flex-col glass-card rounded-3xl overflow-hidden hover:border-pink-500/30 transition-all duration-500 animate-in fade-in slide-in-from-bottom-4 cursor-pointer"
                 style={{ animationDelay: `${idx * 100}ms` }}
+                aria-label={`Vezi detalii despre ${item.title}`}
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={item.imageUrl}
-                    alt={item.title}
-                    fill
-                    className={`${item.objectFit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-700 group-hover:scale-110`}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity" />
+                <article className="flex flex-col h-full">
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={item.imageUrl}
+                      alt={item.title}
+                      fill
+                      className={`${item.objectFit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-700 group-hover:scale-110`}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80 group-hover:opacity-40 transition-opacity" />
 
-                  {/* Category Badge */}
-                  <div className="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded-full text-[10px] uppercase tracking-widest text-pink-500 font-bold">
-                    {item.category}
+                    {/* Category Badge */}
+                    <div className="absolute top-4 left-4 px-3 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded-full text-[10px] uppercase tracking-widest text-pink-500 font-bold">
+                      {item.category}
+                    </div>
                   </div>
-                </div>
 
-                <div className="p-8">
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-pink-500 transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </article>
+                  <div className="p-8">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-pink-500 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                      {item.description}
+                    </p>
+                    <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-pink-500/70 group-hover:text-pink-500 font-bold transition-all">
+                      Vezi detalii
+                      <svg className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </span>
+                  </div>
+                </article>
+              </Link>
             ))}
           </div>
 
