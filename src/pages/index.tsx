@@ -7,23 +7,28 @@ import FAQ from "../components/FAQ";
 const HOME_FAQ = [
   {
     question: "Ce este un semn neon personalizat?",
-    answer: "Un semn neon personalizat este o piesă luminoasă realizată manual, în care orice text, nume, logo sau formă este redată prin LED neon flex montat pe un suport din acril. Lightify produce semne neon la comandă pentru afaceri, evenimente și decor interior."
+    answer:
+      "Un semn neon personalizat este o piesă luminoasă realizată manual, în care orice text, nume, logo sau formă este redată prin LED neon flex montat pe un suport din acril. Lightify produce semne neon la comandă pentru afaceri, evenimente și decor interior.",
   },
   {
     question: "Unde pot comanda un semn neon personalizat în România?",
-    answer: "Lightify este un producător de semne neon personalizate cu sediul în București, Sector 4. Puteți comanda online prin formularul de contact de pe lightify.ro sau ne puteți contacta direct la +40 723 185 255. Livrăm în toată România prin curierat rapid."
+    answer:
+      "Lightify este un producător de semne neon personalizate cu sediul în București, Sector 4. Puteți comanda online prin formularul de contact de pe lightify.ro sau ne puteți contacta direct la +40 723 185 255. Livrăm în toată România prin curierat rapid.",
   },
   {
     question: "Cât costă un semn neon personalizat?",
-    answer: "Prețurile pornesc de la 550 RON pentru un text simplu și de la 1.000 RON pentru logo-uri sau designuri complexe. Trimiteți-ne ideea și primiți o simulare vizuală gratuită și un preț exact în 24 de ore."
+    answer:
+      "Prețurile pornesc de la 550 RON pentru un text simplu și de la 1.000 RON pentru logo-uri sau designuri complexe. Trimiteți-ne ideea și primiți o simulare vizuală gratuită și un preț exact în 24 de ore.",
   },
   {
     question: "Livrați semne neon în afara Bucureștiului?",
-    answer: "Da, livrăm prin curierat rapid în toată România. Produsul este ambalat securizat pentru transport și vine complet cu accesoriile de instalare incluse."
+    answer:
+      "Da, livrăm prin curierat rapid în toată România. Produsul este ambalat securizat pentru transport și vine complet cu accesoriile de instalare incluse.",
   },
   {
     question: "Cât durează realizarea unui semn neon?",
-    answer: "Fiecare semn este realizat manual în atelierul nostru din București. Termenul de producție este de câteva zile lucrătoare, în funcție de complexitatea proiectului. Vei fi informat în orice moment despre statusul comenzii tale."
+    answer:
+      "Fiecare semn este realizat manual în atelierul nostru din București. Termenul de producție este de câteva zile lucrătoare, în funcție de complexitatea proiectului. Vei fi informat în orice moment despre statusul comenzii tale.",
   },
 ];
 
@@ -31,64 +36,71 @@ const HOME_SCHEMAS: object[] = [
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://lightify.ro/" }
-    ]
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Acasă",
+        item: "https://lightify.ro/",
+      },
+    ],
   },
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Lightify",
-    "legalName": "Lightify",
-    "url": "https://lightify.ro",
-    "logo": "https://lightify.ro/icon-512.png",
-    "description": "Lightify este un producător român de semne neon personalizate cu sediul în București. Creăm manual semne neon LED pentru afaceri, evenimente și decor interior, livrând în toată România.",
-    "foundingLocation": {
+    name: "Lightify",
+    legalName: "Lightify",
+    url: "https://lightify.ro",
+    logo: "https://lightify.ro/icon-512.png",
+    description:
+      "Lightify este un producător român de semne neon personalizate cu sediul în București. Creăm manual semne neon LED pentru afaceri, evenimente și decor interior, livrând în toată România.",
+    foundingLocation: {
       "@type": "Place",
-      "address": {
+      address: {
         "@type": "PostalAddress",
-        "addressLocality": "București",
-        "addressCountry": "RO"
-      }
+        addressLocality: "București",
+        addressCountry: "RO",
+      },
     },
-    "contactPoint": {
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": "+40 723 185 255",
-      "contactType": "sales",
-      "email": "vanzari@lightify.ro",
-      "areaServed": "RO",
-      "availableLanguage": "Romanian"
+      telephone: "+40 723 185 255",
+      contactType: "sales",
+      email: "lightifyromania@gmail.com",
+      areaServed: "RO",
+      availableLanguage: "Romanian",
     },
-    "sameAs": [
+    sameAs: [
       "https://www.instagram.com/lightify_ro/",
-      "https://www.facebook.com/lightify.ro"
+      "https://www.facebook.com/lightify.ro",
     ],
-    "areaServed": {
+    areaServed: {
       "@type": "Country",
-      "name": "Romania"
+      name: "Romania",
     },
-    "knowsAbout": [
+    knowsAbout: [
       "Semne neon personalizate",
       "LED neon flex",
       "Reclame luminoase",
       "Firme luminoase",
       "Decorațiuni neon",
-      "Logo neon"
-    ]
+      "Logo neon",
+    ],
   },
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Lightify",
-    "url": "https://lightify.ro",
-    "description": "Producător de semne neon personalizate în România — afaceri, evenimente și decor",
-    "inLanguage": "ro",
-    "potentialAction": {
+    name: "Lightify",
+    url: "https://lightify.ro",
+    description:
+      "Producător de semne neon personalizate în România — afaceri, evenimente și decor",
+    inLanguage: "ro",
+    potentialAction: {
       "@type": "SearchAction",
-      "target": "https://lightify.ro/portofoliu-semne-neon",
-      "query-input": "required name=search_term_string"
-    }
-  }
+      target: "https://lightify.ro/portofoliu-semne-neon",
+      "query-input": "required name=search_term_string",
+    },
+  },
 ];
 
 const FEATURED_ITEMS = [
@@ -97,22 +109,22 @@ const FEATURED_ITEMS = [
     title: "Neon Birthday Party",
     desc: "Creează o atmosferă festivă de neuitat pentru petrecerea ta cu un semn neon personalizat care va străluci în toate fotografiile.",
     img: "/images/plushBday.webp",
-    color: "pink"
+    color: "pink",
   },
   {
     id: 2,
     title: "Neon Personalizat Brand",
     desc: "Întărește identitatea vizuală a brandului tău cu un logo neon premium, realizat manual pentru un impact vizual maxim.",
     img: "/images/jidvei.webp",
-    color: "purple"
+    color: "purple",
   },
   {
     id: 3,
     title: "Neon Afacerea Ta",
     desc: "Transformă-ți spațiul comercial într-o destinație modernă și primitoare cu un design neon unic, adaptat perfect afacerii tale.",
     img: "/images/balcan.jpg",
-    color: "pink"
-  }
+    color: "pink",
+  },
 ];
 
 export default function Home() {
@@ -137,7 +149,7 @@ export default function Home() {
             className="absolute inset-0 opacity-[0.2]"
             style={{
               backgroundImage: `linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)`,
-              backgroundSize: '60px 60px'
+              backgroundSize: "60px 60px",
             }}
           />
 
@@ -156,7 +168,8 @@ export default function Home() {
             </span>
           </h1>
           <p className="mt-8 max-w-lg mx-auto text-lg sm:text-2xl text-gray-300 sm:max-w-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
-            Arta neon realizată manual care dă viață spațiului tău. Calitate premium, design exclusiv și strălucire care durează.
+            Arta neon realizată manual care dă viață spațiului tău. Calitate
+            premium, design exclusiv și strălucire care durează.
           </p>
           <div className="mt-14 flex flex-col sm:flex-row items-center justify-center gap-8 animate-in fade-in zoom-in duration-1000 delay-500">
             <Link
@@ -201,7 +214,9 @@ export default function Home() {
               className="text-pink-500 font-bold hover:text-pink-400 transition-colors flex items-center gap-2 group"
             >
               Vezi toată galeria
-              <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+              <span className="transform group-hover:translate-x-1 transition-transform">
+                →
+              </span>
             </Link>
           </div>
 
@@ -230,7 +245,7 @@ export default function Home() {
                   <div className="mt-6 pt-6 border-t border-white/5">
                     <Link
                       href="/portofoliu-semne-neon"
-                      className={`text-xs font-bold uppercase tracking-widest ${item.color === 'pink' ? 'text-pink-500' : 'text-purple-500'}`}
+                      className={`text-xs font-bold uppercase tracking-widest ${item.color === "pink" ? "text-pink-500" : "text-purple-500"}`}
                     >
                       Vezi Detalii
                     </Link>
@@ -254,7 +269,8 @@ export default function Home() {
               De la concept la creație
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-400">
-              Procesul nostru artizanal asigură că fiecare semn neon este o capodoperă unică.
+              Procesul nostru artizanal asigură că fiecare semn neon este o
+              capodoperă unică.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
@@ -265,7 +281,20 @@ export default function Home() {
                   description:
                     "Echipa noastră de artiști te ajută să-ți rafinezi viziunea, oferind consultanță gratuită pentru culori, fonturi și dimensiuni.",
                   icon: (
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" /></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-8 h-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"
+                      />
+                    </svg>
                   ),
                 },
                 {
@@ -273,7 +302,20 @@ export default function Home() {
                   description:
                     "Fiecare tub este modelat manual folosind tehnologia LED neon flex de ultimă generație pentru o durabilitate maximă.",
                   icon: (
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.055 2.264-.22 2.814Z" /></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-8 h-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.055 2.264-.22 2.814Z"
+                      />
+                    </svg>
                   ),
                 },
                 {
@@ -281,11 +323,27 @@ export default function Home() {
                   description:
                     "Expediem în siguranță prin curierat rapid, cu toate accesoriile necesare pentru instalare incluse în pachet.",
                   icon: (
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" /></svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-8 h-8"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"
+                      />
+                    </svg>
                   ),
                 },
               ].map((feature) => (
-                <div key={feature.title} className="flex flex-col items-center text-center group bg-zinc-950/50 p-10 rounded-[2.5rem] border border-white/5 hover:border-pink-500/30 transition-all duration-500 hover:shadow-neon-pink/10">
+                <div
+                  key={feature.title}
+                  className="flex flex-col items-center text-center group bg-zinc-950/50 p-10 rounded-[2.5rem] border border-white/5 hover:border-pink-500/30 transition-all duration-500 hover:shadow-neon-pink/10"
+                >
                   <div className="h-20 w-20 flex items-center justify-center rounded-2xl bg-black border border-white/10 text-pink-500 mb-8 group-hover:bg-pink-500 group-hover:text-white group-hover:shadow-neon-pink transition-all duration-500">
                     {feature.icon}
                   </div>
@@ -323,7 +381,8 @@ export default function Home() {
             Gata să-ți luminezi spațiul?
           </h2>
           <p className="mt-6 text-xl text-pink-100 max-w-2xl mx-auto">
-            Contactează-ne astăzi pentru o ofertă personalizată și transformă-ți viziunea în realitate.
+            Contactează-ne astăzi pentru o ofertă personalizată și transformă-ți
+            viziunea în realitate.
           </p>
           <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-6">
             <Link

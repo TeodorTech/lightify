@@ -15,25 +15,36 @@ export default function Contact() {
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://lightify.ro/" },
-            { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://lightify.ro/contact" }
-          ]
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Acasă",
+              item: "https://lightify.ro/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Contact",
+              item: "https://lightify.ro/contact",
+            },
+          ],
         },
         {
           "@context": "https://schema.org",
           "@type": "ContactPage",
-          "name": "Contact Lightify",
-          "description": "Solicită o ofertă personalizată pentru semnul tău neon. Consultanță gratuită și simulare vizuală în 24 de ore.",
-          "url": "https://lightify.ro/contact",
-          "mainEntity": {
+          name: "Contact Lightify",
+          description:
+            "Solicită o ofertă personalizată pentru semnul tău neon. Consultanță gratuită și simulare vizuală în 24 de ore.",
+          url: "https://lightify.ro/contact",
+          mainEntity: {
             "@type": "LocalBusiness",
-            "name": "Lightify",
-            "telephone": "+40 723 185 255",
-            "email": "vanzari@lightify.ro",
-            "url": "https://lightify.ro"
-          }
-        }
+            name: "Lightify",
+            telephone: "+40 723 185 255",
+            email: "lightifyromania@gmail.com",
+            url: "https://lightify.ro",
+          },
+        },
       ]}
     >
       <div className="bg-black min-h-screen pt-32 pb-24 selection:bg-pink-500/30 overflow-hidden relative">
@@ -42,7 +53,6 @@ export default function Contact() {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px] -z-10 animate-pulse delay-1000" />
 
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
           <ContactHeader />
 
           <div className="flex flex-col lg:flex-row gap-16 items-start">
@@ -51,7 +61,6 @@ export default function Contact() {
           </div>
 
           <InspirationGallery />
-
         </div>
       </div>
     </Layout>
