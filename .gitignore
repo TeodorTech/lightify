@@ -31,3 +31,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts 
+# calibrarea preturilor: date reale de client, nu ajung in repo-ul public
+pricing-calibration.json

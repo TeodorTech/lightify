@@ -9,7 +9,7 @@
  *   Scandal          1000 ->   983   -1.7%
  *   Manele Mentolate 2000 ->  2107   +5.4%
  *   Pizza Al Taglio  2000 ->  1826   -8.7%
- *   On Air            600 ->   702  +17.1%   (floored to minOrder anyway)
+ *   On Air            600 ->   702  +17.1%
  *   Love People      1600 ->  1277  -20.2%
  *   mean abs error 10.6%
  *
@@ -35,7 +35,7 @@ export const PRICING = {
   ratePerLetter: 128,
 
   /** Sub aceasta suma nu se ia comanda. Texte scurte se ridica automat aici. */
-  minOrder: 1000,
+  minOrder: 650,
 
   /** Latimea intervalului afisat clientului (+/-). */
   displayMargin: 0.12,

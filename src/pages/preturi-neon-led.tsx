@@ -56,7 +56,7 @@ const PRICING_FAQ = [
   {
     question: "Cât costă un semn neon personalizat în România?",
     answer:
-      "Comanda minimă este 1.000 RON și acoperă un text scurt, de până la 8-9 litere la mărime standard. Un text de 10-12 litere cu bandă simplă de neon ajunge de obicei la 1.200-1.700 RON. Varianta cu contur dublu, în care neonul urmează marginile fiecărei litere, este semnificativ mai scumpă, pentru că folosește aproape dublul cantității de tub. Logo-urile pentru afaceri sunt în general între 1.200 și 3.000 RON, în funcție de dimensiune și complexitate. Poți afla intervalul exact pentru designul tău folosind calculatorul de preț de pe această pagină, fără să ne contactezi. Toate prețurile includ TVA.",
+      "Comanda minimă este 650 RON și acoperă un text foarte scurt, de până la 5 litere la mărime standard. Un text de 10-12 litere cu bandă simplă de neon ajunge de obicei între 1.150 și 1.900 RON. Varianta cu contur dublu, în care neonul urmează marginile fiecărei litere, este semnificativ mai scumpă, pentru că folosește aproape dublul cantității de tub. Logo-urile pentru afaceri sunt în general între 1.200 și 3.000 RON, în funcție de dimensiune și complexitate. Poți afla intervalul exact pentru designul tău folosind calculatorul de preț de pe această pagină, fără să ne contactezi. Toate prețurile includ TVA.",
   },
   {
     question: "Ce este inclus în prețul unui semn neon Lightify?",
@@ -128,14 +128,14 @@ const PRICING_SCHEMAS: object[] = [
     "@type": "Product",
     name: "Neon Text Standard",
     description:
-      "Semn neon personalizat cu text simplu — ideal pentru nume, citate scurte sau cuvinte inspiraționale. Comandă minimă 1.000 RON, acoperind un text de până la 8-9 litere la mărime standard. Font și culoare la alegere.",
+      "Semn neon personalizat cu text simplu — ideal pentru nume, citate scurte sau cuvinte inspiraționale. Comandă minimă 650 RON, acoperind un text de până la 5 litere la mărime standard. Font și culoare la alegere.",
     image: "https://lightify.ro/images/on-air.webp",
     brand: { "@type": "Brand", name: "Lightify" },
     category: "Semne neon personalizate",
     url: "https://lightify.ro/preturi-neon-led",
     offers: {
       "@type": "Offer",
-      price: "1000",
+      price: "650",
       priceCurrency: "RON",
       priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
@@ -163,7 +163,7 @@ const PRICING_SCHEMAS: object[] = [
     url: "https://lightify.ro/preturi-neon-led",
     offers: {
       "@type": "Offer",
-      price: "1000",
+      price: "1200",
       priceCurrency: "RON",
       priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
@@ -371,13 +371,13 @@ export default function Pricing() {
                       <span className="text-gray-400">
                         Cuvântul "Dream" (5 litere, 40cm)
                       </span>
-                      <span className="font-bold">de la 1.000 RON</span>
+                      <span className="font-bold">de la 650 RON</span>
                     </div>
                     <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
                       <span className="text-gray-400">
                         Logo "Coffee Shop" (60cm)
                       </span>
-                      <span className="font-bold">1.000 – 1.450 RON</span>
+                      <span className="font-bold">950 – 1.450 RON</span>
                     </div>
                     <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
                       <span className="text-gray-400">
