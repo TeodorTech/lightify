@@ -2,345 +2,454 @@ import React from "react";
 import Link from "next/link";
 import Layout from "../components/layout/Layout";
 import FAQ from "../components/FAQ";
+import PriceEstimator from "../components/pricing/PriceEstimator";
 
 const PRICING_TIERS = [
-    {
-        name: "Neon Text Standard",
-        price: "de la 550 RON",
-        description: "Ideal pentru nume, citate scurte sau cuvinte inspiraționale. Fonturi și culori la alegere.",
-        features: [
-            "Design personalizat",
-            "Lățime până la 50cm",
-            "Până la 8 caractere",
-            "Garanție 24 luni"
-        ],
-        cta: "Solicită ofertă",
-        popular: false,
-        color: "pink"
-    },
-    {
-        name: "Logo & Premium",
-        price: "de la 1000 RON",
-        description: "Transformă logo-ul afacerii tale sau un design complex într-un semn neon spectaculos.",
-        features: [
-            "Design complex / Logo",
-            "Consultanță design 1-la-1",
-            "Opțiune RGB (schimbă culoarea)",
-            "Garanție 24 luni"
-        ],
-        cta: "Configurează acum",
-        popular: true,
-        color: "purple"
-    },
-    {
-        name: "Proiecte Exclusive",
-        price: "Contactează-ne",
-        description: "Instalații de mari dimensiuni, panouri publicitare sau concepte artistice unice.",
-        features: [
-            "Dimensiuni nelimitate",
-            "Consultanță design 1-la-1",
-            "Mentenanță prioritară",
-            "Garanție 24 luni"
-        ],
-        cta: "Discută proiectul",
-        popular: false,
-        color: "blue"
-    }
+  {
+    name: "Neon Text Standard",
+    price: "de la 650 RON",
+    description:
+      "Ideal pentru nume, citate scurte sau cuvinte inspiraționale. Fonturi și culori la alegere.",
+    features: [
+      "Design personalizat",
+      "Lățime până la 50cm",
+      "Până la 8 caractere",
+      "Garanție 24 luni",
+    ],
+    cta: "Solicită ofertă",
+    popular: false,
+    color: "pink",
+  },
+  {
+    name: "Logo & Premium",
+    price: "de la 1200 RON",
+    description:
+      "Transformă logo-ul afacerii tale sau un design complex într-un semn neon spectaculos.",
+    features: [
+      "Design complex / Logo",
+      "Consultanță design 1-la-1",
+      "Opțiune RGB (schimbă culoarea)",
+      "Garanție 24 luni",
+    ],
+    cta: "Configurează acum",
+    popular: true,
+    color: "purple",
+  },
+  {
+    name: "Proiecte Exclusive",
+    price: "Contactează-ne",
+    description:
+      "Instalații de mari dimensiuni, panouri publicitare sau concepte artistice unice.",
+    features: [
+      "Dimensiuni nelimitate",
+      "Consultanță design 1-la-1",
+      "Mentenanță prioritară",
+      "Garanție 24 luni",
+    ],
+    cta: "Discută proiectul",
+    popular: false,
+    color: "blue",
+  },
 ];
 
 const PRICING_FAQ = [
-    {
-        question: "Cât costă un semn neon personalizat în România?",
-        answer: "Prețurile pornesc de la 550 RON pentru un text simplu (până la 8 caractere, max. 50cm lățime) și de la 1.000 RON pentru logo-uri sau designuri complexe. Proiectele mari sau instalațiile publicitare au prețul stabilit individual. Toate prețurile includ TVA."
-    },
-    {
-        question: "Ce este inclus în prețul unui semn neon Lightify?",
-        answer: "Prețul include designul personalizat, producția manuală, suportul din acril, transformatorul, cablurile de alimentare, accesoriile de montaj și livrarea prin curierat în toată România. Garanția de 24 luni este inclusă la toate produsele."
-    },
-    {
-        question: "Pot schimba culoarea semnului neon?",
-        answer: "Da, prin opțiunea RGB cu telecomandă poți schimba culoarea semnului oricând. Această opțiune se adaugă la prețul de bază și este disponibilă pentru orice model din gama noastră."
-    },
-    {
-        question: "Cât durează producția unui semn neon?",
-        answer: "Termenul standard de producție este de câteva zile lucrătoare, în funcție de complexitatea proiectului și volumul comenzilor. Vei primi o simulare vizuală gratuită și prețul final în maxim 24 de ore de la trimiterea cererii."
-    },
-    {
-        question: "Oferiți garanție pentru semnele neon?",
-        answer: "Da, toate produsele Lightify vin cu garanție de 24 de luni. Folosim LED neon flex de calitate superioară cu o durabilitate de peste 50.000 de ore de funcționare continuă."
-    },
-    {
-        question: "Livrați semne neon în toată România?",
-        answer: "Da, livrăm prin curierat rapid în toată România. Produsul este ambalat securizat pentru transport, cu toate accesoriile de instalare incluse."
-    },
+  {
+    question: "Cât costă un semn neon personalizat în România?",
+    answer:
+      "Comanda minimă este 1.000 RON și acoperă un text scurt, de până la 8-9 litere la mărime standard. Un text de 10-12 litere cu bandă simplă de neon ajunge de obicei la 1.200-1.700 RON. Varianta cu contur dublu, în care neonul urmează marginile fiecărei litere, este semnificativ mai scumpă, pentru că folosește aproape dublul cantității de tub. Logo-urile pentru afaceri sunt în general între 1.200 și 3.000 RON, în funcție de dimensiune și complexitate. Poți afla intervalul exact pentru designul tău folosind calculatorul de preț de pe această pagină, fără să ne contactezi. Toate prețurile includ TVA.",
+  },
+  {
+    question: "Ce este inclus în prețul unui semn neon Lightify?",
+    answer:
+      "Prețul include designul personalizat, producția manuală, suportul din acril, transformatorul, cablurile de alimentare, accesoriile de montaj și livrarea prin curierat în toată România. Garanția de 24 luni este inclusă la toate produsele.",
+  },
+  {
+    question: "Pot schimba culoarea semnului neon?",
+    answer:
+      "Da, prin opțiunea RGB cu telecomandă poți schimba culoarea semnului oricând. Această opțiune se adaugă la prețul de bază și este disponibilă pentru orice model din gama noastră.",
+  },
+  {
+    question: "Cât durează producția unui semn neon?",
+    answer:
+      "Termenul standard de producție este de câteva zile lucrătoare, în funcție de complexitatea proiectului și volumul comenzilor. Vei primi o simulare vizuală gratuită și prețul final în maxim 24 de ore de la trimiterea cererii.",
+  },
+  {
+    question: "Oferiți garanție pentru semnele neon?",
+    answer:
+      "Da, toate produsele Lightify vin cu garanție de 24 de luni. Folosim LED neon flex de calitate superioară cu o durabilitate de peste 50.000 de ore de funcționare continuă.",
+  },
+  {
+    question: "Livrați semne neon în toată România?",
+    answer:
+      "Da, livrăm prin curierat rapid în toată România. Produsul este ambalat securizat pentru transport, cu toate accesoriile de instalare incluse.",
+  },
 ];
 
 const PRICE_FACTORS = [
-    {
-        title: "Dimensiunea",
-        desc: "Lungimea totală a tubului neon utilizat este principalul factor. Cu cât semnul este mai mare, cu atât necesită mai mult material și manoperă."
-    },
-    {
-        title: "Complexitatea",
-        desc: "Un text simplu este mai ușor de realizat decât un logo detaliat cu multe curbe strânse și elemente grafice fine."
-    },
-    {
-        title: "Tipul de Suport",
-        desc: "Baza de acril poate fi tăiată la formă sau dreptunghiulară, transparentă sau colorată, influențând estetica și costul final."
-    },
-    {
-        title: "Tehnologia",
-        desc: "Opțiunile precum culorile RGB (cu telecomandă) sau efectele de 'chasing light' adaugă un plus de valoare și cost."
-    }
+  {
+    title: "Dimensiunea",
+    desc: "Lungimea totală a tubului neon utilizat este principalul factor. Cu cât semnul este mai mare, cu atât necesită mai mult material și manoperă.",
+  },
+  {
+    title: "Complexitatea",
+    desc: "Un text simplu este mai ușor de realizat decât un logo detaliat cu multe curbe strânse și elemente grafice fine.",
+  },
+  {
+    title: "Tipul de Neon",
+    desc: "O bandă simplă urmează traseul literei cu un singur fir de neon. Conturul dublu înconjoară marginile fiecărei litere și folosește aproape dublul cantității de tub, pentru un efect mult mai puternic.",
+  },
+  {
+    title: "Tehnologia",
+    desc: "Opțiunile precum culorile RGB (cu telecomandă) sau efectele de 'chasing light' adaugă un plus de valoare și cost.",
+  },
 ];
 
 const PRICING_SCHEMAS: object[] = [
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://lightify.ro/" },
-            { "@type": "ListItem", "position": 2, "name": "Prețuri", "item": "https://lightify.ro/preturi-neon-led" }
-        ]
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Acasă",
+        item: "https://lightify.ro/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Prețuri",
+        item: "https://lightify.ro/preturi-neon-led",
+      },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Neon Text Standard",
+    description:
+      "Semn neon personalizat cu text simplu — ideal pentru nume, citate scurte sau cuvinte inspiraționale. Comandă minimă 1.000 RON, acoperind un text de până la 8-9 litere la mărime standard. Font și culoare la alegere.",
+    image: "https://lightify.ro/images/on-air.webp",
+    brand: { "@type": "Brand", name: "Lightify" },
+    category: "Semne neon personalizate",
+    url: "https://lightify.ro/preturi-neon-led",
+    offers: {
+      "@type": "Offer",
+      price: "1000",
+      priceCurrency: "RON",
+      priceValidUntil: "2026-12-31",
+      availability: "https://schema.org/InStock",
+      seller: {
+        "@type": "Organization",
+        name: "Lightify",
+        url: "https://lightify.ro",
+      },
     },
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Neon Text Standard",
-        "description": "Semn neon personalizat cu text simplu — ideal pentru nume, citate scurte sau cuvinte inspiraționale. Până la 8 caractere, lățime max. 50cm. Font și culoare la alegere.",
-        "image": "https://lightify.ro/images/on-air.webp",
-        "brand": { "@type": "Brand", "name": "Lightify" },
-        "category": "Semne neon personalizate",
-        "url": "https://lightify.ro/preturi-neon-led",
-        "offers": {
-            "@type": "Offer",
-            "price": "550",
-            "priceCurrency": "RON",
-            "priceValidUntil": "2026-12-31",
-            "availability": "https://schema.org/InStock",
-            "seller": { "@type": "Organization", "name": "Lightify", "url": "https://lightify.ro" }
-        },
-        "additionalProperty": [
-            { "@type": "PropertyValue", "name": "Garanție", "value": "24 luni" },
-            { "@type": "PropertyValue", "name": "Tehnologie", "value": "LED neon flex" },
-            { "@type": "PropertyValue", "name": "Durabilitate", "value": "50.000+ ore" }
-        ]
+    additionalProperty: [
+      { "@type": "PropertyValue", name: "Garanție", value: "24 luni" },
+      { "@type": "PropertyValue", name: "Tehnologie", value: "LED neon flex" },
+      { "@type": "PropertyValue", name: "Durabilitate", value: "50.000+ ore" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Logo Neon & Premium",
+    description:
+      "Logo-ul afacerii tale sau orice design complex transformat în semn neon spectaculos. Include consultanță design 1-la-1 și opțiune RGB cu telecomandă.",
+    image: "https://lightify.ro/images/torerro2.webp",
+    brand: { "@type": "Brand", name: "Lightify" },
+    category: "Semne neon personalizate",
+    url: "https://lightify.ro/preturi-neon-led",
+    offers: {
+      "@type": "Offer",
+      price: "1000",
+      priceCurrency: "RON",
+      priceValidUntil: "2026-12-31",
+      availability: "https://schema.org/InStock",
+      seller: {
+        "@type": "Organization",
+        name: "Lightify",
+        url: "https://lightify.ro",
+      },
     },
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Logo Neon & Premium",
-        "description": "Logo-ul afacerii tale sau orice design complex transformat în semn neon spectaculos. Include consultanță design 1-la-1 și opțiune RGB cu telecomandă.",
-        "image": "https://lightify.ro/images/torerro2.webp",
-        "brand": { "@type": "Brand", "name": "Lightify" },
-        "category": "Semne neon personalizate",
-        "url": "https://lightify.ro/preturi-neon-led",
-        "offers": {
-            "@type": "Offer",
-            "price": "1000",
-            "priceCurrency": "RON",
-            "priceValidUntil": "2026-12-31",
-            "availability": "https://schema.org/InStock",
-            "seller": { "@type": "Organization", "name": "Lightify", "url": "https://lightify.ro" }
-        },
-        "additionalProperty": [
-            { "@type": "PropertyValue", "name": "Garanție", "value": "24 luni" },
-            { "@type": "PropertyValue", "name": "Tehnologie", "value": "LED neon flex" },
-            { "@type": "PropertyValue", "name": "Opțiune RGB", "value": "Disponibilă" }
-        ]
+    additionalProperty: [
+      { "@type": "PropertyValue", name: "Garanție", value: "24 luni" },
+      { "@type": "PropertyValue", name: "Tehnologie", value: "LED neon flex" },
+      { "@type": "PropertyValue", name: "Opțiune RGB", value: "Disponibilă" },
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: "Proiecte Exclusive Neon",
+    description:
+      "Instalații neon de mari dimensiuni, panouri publicitare, reclame luminoase exterioare sau concepte artistice unice. Dimensiuni nelimitate, consultanță dedicată, mentenanță prioritară.",
+    image: "https://lightify.ro/images/jidvei.webp",
+    brand: { "@type": "Brand", name: "Lightify" },
+    category: "Reclame luminoase și instalații neon",
+    url: "https://lightify.ro/preturi-neon-led",
+    offers: {
+      "@type": "AggregateOffer",
+      lowPrice: "1500",
+      priceCurrency: "RON",
+      offerCount: "1",
+      availability: "https://schema.org/InStock",
+      seller: {
+        "@type": "Organization",
+        name: "Lightify",
+        url: "https://lightify.ro",
+      },
     },
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Proiecte Exclusive Neon",
-        "description": "Instalații neon de mari dimensiuni, panouri publicitare, reclame luminoase exterioare sau concepte artistice unice. Dimensiuni nelimitate, consultanță dedicată, mentenanță prioritară.",
-        "image": "https://lightify.ro/images/jidvei.webp",
-        "brand": { "@type": "Brand", "name": "Lightify" },
-        "category": "Reclame luminoase și instalații neon",
-        "url": "https://lightify.ro/preturi-neon-led",
-        "offers": {
-            "@type": "AggregateOffer",
-            "lowPrice": "1500",
-            "priceCurrency": "RON",
-            "offerCount": "1",
-            "availability": "https://schema.org/InStock",
-            "seller": { "@type": "Organization", "name": "Lightify", "url": "https://lightify.ro" }
-        },
-        "additionalProperty": [
-            { "@type": "PropertyValue", "name": "Garanție", "value": "24 luni" },
-            { "@type": "PropertyValue", "name": "Mentenanță", "value": "Prioritară" }
-        ]
-    }
+    additionalProperty: [
+      { "@type": "PropertyValue", name: "Garanție", value: "24 luni" },
+      { "@type": "PropertyValue", name: "Mentenanță", value: "Prioritară" },
+    ],
+  },
 ];
 
 export default function Pricing() {
-    return (
-        <Layout
-            title="Prețuri Semne Neon Personalizate | Afișe Luminoase LED | Lightify"
-            description="Vezi prețurile pentru semne neon personalizate și afișe luminoase LED în București. Oferte transparente pentru logo-uri neon, texte luminoase și proiecte speciale de la Lightify."
-            keywords="preturi neon personalizat, cost firma luminoasa, pret afis led, oferta semne neon, neon ieftin bucuresti, pret logo neon"
-            faqItems={PRICING_FAQ}
-            extraSchemas={PRICING_SCHEMAS}
-        >
-            <div className="bg-black text-white selection:bg-pink-500/30">
+  return (
+    <Layout
+      title="Prețuri Semne Neon Personalizate | Afișe Luminoase LED | Lightify"
+      description="Vezi prețurile pentru semne neon personalizate și afișe luminoase LED în București. Oferte transparente pentru logo-uri neon, texte luminoase și proiecte speciale de la Lightify."
+      keywords="preturi neon personalizat, cost firma luminoasa, pret afis led, oferta semne neon, neon ieftin bucuresti, pret logo neon"
+      faqItems={PRICING_FAQ}
+      extraSchemas={PRICING_SCHEMAS}
+    >
+      <div className="bg-black text-white selection:bg-pink-500/30">
+        {/* Hero Section */}
+        <section className="relative pt-40 pb-20 overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-[radial-gradient(circle_at_center,rgba(236,72,153,0.15)_0%,transparent_70%)] blur-[100px]" />
 
-                {/* Hero Section */}
-                <section className="relative pt-40 pb-20 overflow-hidden">
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-[radial-gradient(circle_at_center,rgba(236,72,153,0.15)_0%,transparent_70%)] blur-[100px]" />
-
-                    <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
-                        <div className="inline-block px-4 py-1.5 bg-pink-500/10 border border-pink-500/20 rounded-full text-pink-500 text-sm font-bold tracking-widest uppercase mb-8">
-                            Investește în atmosferă
-                        </div>
-                        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 animate-in fade-in slide-in-from-top-4 duration-1000">
-                            Prețuri <span className="text-glow-pink text-pink-500">transparente</span>
-                        </h1>
-                        <p className="mx-auto max-w-2xl text-lg md:text-xl text-gray-400 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
-                            Calitatea premium nu trebuie să fie un mister. Am creat structuri de preț clare pentru a te ajuta să-ți planifici proiectul ideal.
-                        </p>
-                    </div>
-                </section>
-
-                {/* Pricing Tiers */}
-                <section className="py-24 relative">
-                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            {PRICING_TIERS.map((tier) => (
-                                <div
-                                    key={tier.name}
-                                    className={`relative glass-card rounded-[2.5rem] p-8 md:p-10 border transition-all duration-500 flex flex-col hover:-translate-y-2 ${tier.popular ? 'border-purple-500 shadow-neon-purple ring-1 ring-purple-500' : 'border-white/10 hover:border-pink-500/40'
-                                        }`}
-                                >
-                                    {tier.popular && (
-                                        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-600 to-pink-500 px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">
-                                            Cel mai popular
-                                        </div>
-                                    )}
-
-                                    <div className="mb-8">
-                                        <h3 className="text-xl font-bold mb-2">{tier.name}</h3>
-                                        <div className="flex items-baseline gap-1">
-                                            <span className={`text-3xl font-black ${tier.color === 'pink' ? 'text-pink-500' : (tier.color === 'purple' ? 'text-purple-500' : 'text-blue-500')}`}>
-                                                {tier.price}
-                                            </span>
-                                        </div>
-                                        <p className="mt-4 text-gray-400 text-sm leading-relaxed">
-                                            {tier.description}
-                                        </p>
-                                    </div>
-
-                                    <ul className="space-y-4 mb-10 flex-grow">
-                                        {tier.features.map((feature) => (
-                                            <li key={feature} className="flex items-center gap-3 text-sm text-gray-300">
-                                                <svg className={`shrink-0 w-5 h-5 ${tier.color === 'pink' ? 'text-pink-500' : (tier.color === 'purple' ? 'text-purple-500' : 'text-blue-500')}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                                                </svg>
-                                                {feature}
-                                            </li>
-                                        ))}
-                                    </ul>
-
-                                    <Link
-                                        href="/contact"
-                                        className={`w-full py-4 rounded-2xl font-bold text-center transition-all ${tier.popular
-                                            ? 'bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-neon-purple hover:opacity-90'
-                                            : 'bg-white/5 text-white border border-white/10 hover:bg-white/10'
-                                            }`}
-                                    >
-                                        {tier.cta}
-                                    </Link>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* Price Factors Section */}
-                <section className="py-24 bg-zinc-950/50">
-                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                            <div>
-                                <h2 className="text-4xl font-bold mb-8 leading-tight">
-                                    Ce influențează <br />
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">costul semnului tău?</span>
-                                </h2>
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
-                                    {PRICE_FACTORS.map((factor) => (
-                                        <div key={factor.title}>
-                                            <h4 className="text-white font-bold mb-2 flex items-center gap-2">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-pink-500" />
-                                                {factor.title}
-                                            </h4>
-                                            <p className="text-sm text-gray-400 leading-relaxed">
-                                                {factor.desc}
-                                            </p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div className="relative group">
-                                <div className="absolute -inset-4 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-[2.5rem] blur-2xl opacity-50" />
-                                <div className="relative glass-card p-10 rounded-[2rem] border-white/10">
-                                    <h3 className="text-2xl font-bold mb-6 italic">Exemplu de calcul:</h3>
-                                    <div className="space-y-4">
-                                        <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
-                                            <span className="text-gray-400">Cuvântul "Dream" (40cm)</span>
-                                            <span className="font-bold">~ 550 RON</span>
-                                        </div>
-                                        <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
-                                            <span className="text-gray-400">Logo "Coffee Shop" (60cm)</span>
-                                            <span className="font-bold">~ 1500 RON</span>
-                                        </div>
-                                        <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
-                                            <span className="text-gray-400">Semn "Wedding Day" + Controler RGB</span>
-                                            <span className="font-bold">~ 2000 RON</span>
-                                        </div>
-                                    </div>
-                                    <div className="mt-8 pt-8 border-t border-white/10">
-                                        <p className="text-xs text-gray-500 uppercase tracking-widest font-bold">
-                                            * Prețurile sunt estimative și includ TVA.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* FAQ Section */}
-                <FAQ
-                    items={PRICING_FAQ}
-                    title="Întrebări despre prețuri"
-                    subtitle="Tot ce trebuie să știi înainte să comanzi semnul tău neon."
-                />
-
-                {/* Interactive CTA */}
-                <section className="py-32 relative overflow-hidden">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-purple-500/5 rounded-full blur-[120px]" />
-                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                        <div className="glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl -mr-32 -mt-32" />
-                            <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">
-                                Vrei un preț exact <br />
-                                <span className="text-glow-purple text-purple-500">în 24 de ore?</span>
-                            </h2>
-                            <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-                                Trimite-ne ideea ta, dimensiunile aproximative și culorile dorite. Revizuim proiectul și îți trimitem o simulare gratuită și prețul final.
-                            </p>
-                            <Link
-                                href="/contact"
-                                className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-black rounded-full hover:shadow-[0_0_30px_rgba(236,72,153,0.4)] transition-all transform hover:-translate-y-1"
-                            >
-                                Obține oferta ta acum
-                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
-                            </Link>
-                        </div>
-                    </div>
-                </section>
+          <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
+            <div className="inline-block px-4 py-1.5 bg-pink-500/10 border border-pink-500/20 rounded-full text-pink-500 text-sm font-bold tracking-widest uppercase mb-8">
+              Investește în atmosferă
             </div>
-        </Layout>
-    );
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 animate-in fade-in slide-in-from-top-4 duration-1000">
+              Prețuri{" "}
+              <span className="text-glow-pink text-pink-500">transparente</span>
+            </h1>
+            <p className="mx-auto max-w-2xl text-lg md:text-xl text-gray-400 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
+              Calitatea premium nu trebuie să fie un mister. Am creat structuri
+              de preț clare pentru a te ajuta să-ți planifici proiectul ideal.
+            </p>
+          </div>
+        </section>
+
+        {/* Instant Price Estimator */}
+        <section className="pb-8 relative">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <div className="inline-block px-4 py-1.5 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-xs font-bold tracking-widest uppercase mb-6">
+                Fără să ne contactezi
+              </div>
+              <h2 className="text-3xl md:text-5xl font-black mb-5 leading-tight">
+                Calculează prețul{" "}
+                <span className="text-glow-purple text-purple-500">
+                  ideii tale
+                </span>
+              </h2>
+              <p className="mx-auto max-w-2xl text-gray-400 leading-relaxed">
+                Configurează semnul tău și vezi intervalul de preț pe loc.
+                Estimarea este calculată pe baza proiectelor reale pe care le-am
+                livrat.
+              </p>
+            </div>
+
+            <PriceEstimator />
+          </div>
+        </section>
+
+        {/* Pricing Tiers */}
+        <section className="py-24 relative">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {PRICING_TIERS.map((tier) => (
+                <div
+                  key={tier.name}
+                  className={`relative glass-card rounded-[2.5rem] p-8 md:p-10 border transition-all duration-500 flex flex-col hover:-translate-y-2 ${
+                    tier.popular
+                      ? "border-purple-500 shadow-neon-purple ring-1 ring-purple-500"
+                      : "border-white/10 hover:border-pink-500/40"
+                  }`}
+                >
+                  {tier.popular && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-600 to-pink-500 px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">
+                      Cel mai popular
+                    </div>
+                  )}
+
+                  <div className="mb-8">
+                    <h3 className="text-xl font-bold mb-2">{tier.name}</h3>
+                    <div className="flex items-baseline gap-1">
+                      <span
+                        className={`text-3xl font-black ${tier.color === "pink" ? "text-pink-500" : tier.color === "purple" ? "text-purple-500" : "text-blue-500"}`}
+                      >
+                        {tier.price}
+                      </span>
+                    </div>
+                    <p className="mt-4 text-gray-400 text-sm leading-relaxed">
+                      {tier.description}
+                    </p>
+                  </div>
+
+                  <ul className="space-y-4 mb-10 flex-grow">
+                    {tier.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-center gap-3 text-sm text-gray-300"
+                      >
+                        <svg
+                          className={`shrink-0 w-5 h-5 ${tier.color === "pink" ? "text-pink-500" : tier.color === "purple" ? "text-purple-500" : "text-blue-500"}`}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={3}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Link
+                    href="/contact"
+                    className={`w-full py-4 rounded-2xl font-bold text-center transition-all ${
+                      tier.popular
+                        ? "bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-neon-purple hover:opacity-90"
+                        : "bg-white/5 text-white border border-white/10 hover:bg-white/10"
+                    }`}
+                  >
+                    {tier.cta}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Price Factors Section */}
+        <section className="py-24 bg-zinc-950/50">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-4xl font-bold mb-8 leading-tight">
+                  Ce influențează <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+                    costul semnului tău?
+                  </span>
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
+                  {PRICE_FACTORS.map((factor) => (
+                    <div key={factor.title}>
+                      <h4 className="text-white font-bold mb-2 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-pink-500" />
+                        {factor.title}
+                      </h4>
+                      <p className="text-sm text-gray-400 leading-relaxed">
+                        {factor.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-[2.5rem] blur-2xl opacity-50" />
+                <div className="relative glass-card p-10 rounded-[2rem] border-white/10">
+                  <h3 className="text-2xl font-bold mb-6 italic">
+                    Exemplu de calcul:
+                  </h3>
+                  <div className="space-y-4">
+                    <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
+                      <span className="text-gray-400">
+                        Cuvântul "Dream" (5 litere, 40cm)
+                      </span>
+                      <span className="font-bold">de la 1.000 RON</span>
+                    </div>
+                    <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
+                      <span className="text-gray-400">
+                        Logo "Coffee Shop" (60cm)
+                      </span>
+                      <span className="font-bold">1.000 – 1.450 RON</span>
+                    </div>
+                    <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
+                      <span className="text-gray-400">
+                        Semn "Wedding Day" + RGB (84cm)
+                      </span>
+                      <span className="font-bold">1.250 – 1.600 RON</span>
+                    </div>
+                    <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
+                      <span className="text-gray-400">
+                        Text "Coffee Time" cu contur dublu (84cm)
+                      </span>
+                      <span className="font-bold">2.250 – 2.850 RON</span>
+                    </div>
+                  </div>
+                  <div className="mt-8 pt-8 border-t border-white/10">
+                    <p className="text-xs text-gray-500 uppercase tracking-widest font-bold">
+                      * Prețurile sunt estimative și includ TVA.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <FAQ
+          items={PRICING_FAQ}
+          title="Întrebări despre prețuri"
+          subtitle="Tot ce trebuie să știi înainte să comanzi semnul tău neon."
+        />
+
+        {/* Interactive CTA */}
+        <section className="py-32 relative overflow-hidden">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-purple-500/5 rounded-full blur-[120px]" />
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="glass-card rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-pink-500/10 rounded-full blur-3xl -mr-32 -mt-32" />
+              <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">
+                Vrei un preț exact <br />
+                <span className="text-glow-purple text-purple-500">
+                  în 24 de ore?
+                </span>
+              </h2>
+              <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                Trimite-ne ideea ta, dimensiunile aproximative și culorile
+                dorite. Revizuim proiectul și îți trimitem o simulare gratuită
+                și prețul final.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-pink-600 to-purple-600 text-white font-black rounded-full hover:shadow-[0_0_30px_rgba(236,72,153,0.4)] transition-all transform hover:-translate-y-1"
+              >
+                Obține oferta ta acum
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </Layout>
+  );
 }
