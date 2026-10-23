@@ -257,6 +257,15 @@ export const portfolioItems: PortfolioItem[] = [
     imageUrl: "/images/pizzaAlTaglio.webp",
     objectFit: "contain",
   },
+  {
+    id: 18,
+    slug: "neon-lips",
+    title: "Neon Lips",
+    description:
+      "Buze roșii cu o țigară în alb rece — un neon decorativ cu atitudine, perfect pentru dormitor, living sau un colț de bar acasă.",
+    category: "casă",
+    imageUrl: "/images/neon-lips.webp",
+  },
 ];
 
 export const getItemBySlug = (slug: string): PortfolioItem | undefined =>
