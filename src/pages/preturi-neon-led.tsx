@@ -7,7 +7,7 @@ import PriceEstimator from "../components/pricing/PriceEstimator";
 const PRICING_TIERS = [
   {
     name: "Neon Text Standard",
-    price: "de la 650 RON",
+    price: "de la 950 RON",
     description:
       "Ideal pentru nume, citate scurte sau cuvinte inspiraționale. Fonturi și culori la alegere.",
     features: [
@@ -56,7 +56,7 @@ const PRICING_FAQ = [
   {
     question: "Cât costă un semn neon personalizat în România?",
     answer:
-      "Comanda minimă este 650 RON și acoperă un text foarte scurt, de până la 5 litere la mărime standard. Un text de 10-12 litere cu bandă simplă de neon ajunge de obicei între 1.150 și 1.900 RON. Varianta cu contur dublu, în care neonul urmează marginile fiecărei litere, este semnificativ mai scumpă, pentru că folosește aproape dublul cantității de tub. Logo-urile pentru afaceri sunt în general între 1.200 și 3.000 RON, în funcție de dimensiune și complexitate. Poți afla intervalul exact pentru designul tău folosind calculatorul de preț de pe această pagină, fără să ne contactezi. Toate prețurile includ TVA.",
+      "Prețul depinde în primul rând de lățimea semnului, nu de numărul de litere. Un text scurt, de până la 5 litere (aproximativ 40 cm), pornește de la 950 RON. Un text de 10-12 litere la mărime standard (80-100 cm) cu bandă simplă de neon ajunge de obicei între 1.250 și 1.750 RON. Varianta cu contur dublu, în care neonul urmează marginile fiecărei litere, este semnificativ mai scumpă, pentru că folosește aproape dublul cantității de tub. Logo-urile pentru afaceri sunt în general între 1.200 și 3.500 RON, în funcție de dimensiune și complexitate. Poți afla intervalul exact pentru designul tău folosind calculatorul de preț de pe această pagină, fără să ne contactezi. Toate prețurile includ TVA.",
   },
   {
     question: "Ce este inclus în prețul unui semn neon Lightify?",
@@ -128,14 +128,14 @@ const PRICING_SCHEMAS: object[] = [
     "@type": "Product",
     name: "Neon Text Standard",
     description:
-      "Semn neon personalizat cu text simplu — ideal pentru nume, citate scurte sau cuvinte inspiraționale. Comandă minimă 650 RON, acoperind un text de până la 5 litere la mărime standard. Font și culoare la alegere.",
+      "Semn neon personalizat cu text simplu — ideal pentru nume, citate scurte sau cuvinte inspiraționale. Prețuri de la 950 RON pentru un text de până la 5 litere (aproximativ 40 cm). Font și culoare la alegere.",
     image: "https://lightify.ro/images/on-air.webp",
     brand: { "@type": "Brand", name: "Lightify" },
     category: "Semne neon personalizate",
     url: "https://lightify.ro/preturi-neon-led",
     offers: {
       "@type": "Offer",
-      price: "650",
+      price: "950",
       priceCurrency: "RON",
       priceValidUntil: "2026-12-31",
       availability: "https://schema.org/InStock",
@@ -371,25 +371,25 @@ export default function Pricing() {
                       <span className="text-gray-400">
                         Cuvântul "Dream" (5 litere, 40cm)
                       </span>
-                      <span className="font-bold">de la 650 RON</span>
+                      <span className="font-bold">950 – 1.200 RON</span>
                     </div>
                     <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
                       <span className="text-gray-400">
                         Logo "Coffee Shop" (60cm)
                       </span>
-                      <span className="font-bold">950 – 1.450 RON</span>
+                      <span className="font-bold">1.250 – 1.900 RON</span>
                     </div>
                     <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
                       <span className="text-gray-400">
                         Semn "Wedding Day" + RGB (84cm)
                       </span>
-                      <span className="font-bold">1.250 – 1.600 RON</span>
+                      <span className="font-bold">1.400 – 1.800 RON</span>
                     </div>
                     <div className="flex justify-between items-center pb-4 border-bottom border-white/5">
                       <span className="text-gray-400">
                         Text "Coffee Time" cu contur dublu (84cm)
                       </span>
-                      <span className="font-bold">2.250 – 2.850 RON</span>
+                      <span className="font-bold">2.000 – 2.550 RON</span>
                     </div>
                   </div>
                   <div className="mt-8 pt-8 border-t border-white/10">

@@ -1,20 +1,23 @@
 /**
  * Lightify price model.
  *
- * Calibrated against 5 real projects (see CALIBRATION_SET below), all of which
- * are treated as SINGLE-stroke builds.
- * Form: letters x rate x size x stroke x graphic x category x rgb (+ delivery)
+ * Width, not letter count, drives the price. Recent projects range from 62 to
+ * 187 RON/letter but sit on one line when plotted against width: more letters
+ * in the same width just means smaller letters, not more tube.
+ * Form: (fixedFee + ratePerCm x width x stroke) x graphic x category x rgb (+ delivery)
  *
- * Current fit, base rate 128 RON/letter:
- *   Scandal          1000 ->   983   -1.7%
- *   Manele Mentolate 2000 ->  2107   +5.4%
- *   Pizza Al Taglio  2000 ->  1826   -8.7%
- *   On Air            600 ->   702  +17.1%
- *   Love People      1600 ->  1277  -20.2%
- *   mean abs error 10.6%
+ * Fitted on the 4 most recent projects (Oct 2026, all single-stroke text;
+ * names and prices in pricing-calibration.json, which is gitignored):
+ *   text  70 x 20 cm, firma     1350 -> 1463   +8.4%
+ *   text  80 x 15 cm, personal  1500 -> 1420   -5.3%
+ *   text 150 x 35 cm, personal  2000 -> 2050   +2.5%
+ *   text  55 x 50 cm, firma     1300 -> 1315   +1.2%
+ *   mean abs error 4.4%
  *
- * Garden Of Teilor (3000 RON / 14 letters = 214 RON/letter) is a deliberate
- * outlier and is NOT fitted -- it sits ~40% above every other project.
+ * Older portfolio projects (CALIBRATION_SET) are kept for reference, not fitted.
+ * Scandal (1000) and On Air (600) predate the current price level; the model
+ * now quotes them at 1364 and 1166. The two logos at 100 cm land on the "mediu" tier:
+ *   Manele Mentolate 2000 -> 2024 / Pizza Al Taglio 2000 -> 2024.
  *
  * To retune: change PRICING only. Nothing else in the app hardcodes a price.
  */
@@ -31,8 +34,10 @@ export type Delivery = "bucuresti" | "tara";
  * CALIBRARE - singurul loc unde se schimba preturile.
  * ------------------------------------------------------------------------- */
 export const PRICING = {
-  /** RON per litera, la marime standard, banda simpla, categorie non-business. */
-  ratePerLetter: 128,
+  /** Costul fix al oricarui semn: transformator, suport acril, ambalaj, pornirea lucrului. */
+  fixedFee: 700,
+  /** RON per cm de latime, banda simpla, categorie non-business. */
+  ratePerCm: 9,
 
   /** Sub aceasta suma nu se ia comanda. Texte scurte se ridica automat aici. */
   minOrder: 650,
@@ -44,21 +49,20 @@ export const PRICING = {
 
   /**
    * Marimi. cmPerUnit = cati cm de latime ocupa o litera (spatiile = 0.5).
-   * Portofoliul actual se grupeaza la 6.4-9.3 cm/litera, deci "standard" = 8.
-   * Multiplicatorii sunt blanzi intentionat: datele nu arata ca marimea per
-   * litera schimba mult pretul. Exista ca sa te protejeze la litere foarte mari.
+   * Proiectele reale merg de la 6.4 la 16.7 cm/litera. Marimea intra in pret
+   * doar prin latimea rezultata -- nu are multiplicator propriu.
    */
   sizes: {
-    mic: { label: "Mic", cmPerUnit: 6, multiplier: 0.9 },
-    standard: { label: "Standard", cmPerUnit: 8, multiplier: 1.0 },
-    mare: { label: "Mare", cmPerUnit: 11, multiplier: 1.15 },
-    xl: { label: "Foarte mare", cmPerUnit: 15, multiplier: 1.5 },
-  } as Record<SizeKey, { label: string; cmPerUnit: number; multiplier: number }>,
+    mic: { label: "Mic", cmPerUnit: 6 },
+    standard: { label: "Standard", cmPerUnit: 8 },
+    mare: { label: "Mare", cmPerUnit: 11 },
+    xl: { label: "Foarte mare", cmPerUnit: 15 },
+  } as Record<SizeKey, { label: string; cmPerUnit: number }>,
 
   /**
    * Conturul dublu urmeaza ambele margini ale literei, deci aproximativ dubleaza
-   * tubul folosit. Nu e x2 fix pentru ca transformatorul, acrilul si montajul
-   * raman aceleasi. <-- numarul de confirmat de Teodor.
+   * tubul folosit. Se aplica doar pe partea per cm: costul fix (transformator,
+   * acril, montaj) ramane acelasi. <-- numarul de confirmat de Teodor.
    */
   strokes: { single: 1.0, double: 1.8 } as Record<StrokeStyle, number>,
 
@@ -78,11 +82,14 @@ export const PRICING = {
   /** Limitele sliderului de latime pentru logo/desen. Peste 120cm nu se poate produce. */
   logoWidthRange: { min: 40, max: 120, step: 10 },
 
-  /** RON per cm de latime, pentru logo/desen. Derivat din Pizza / Manele / Teilor. */
-  logoRatePerCm: {
-    simplu: 14,
-    mediu: 18,
-    detaliat: 27,
+  /**
+   * Multiplicator peste formula de text, pentru logo/desen la aceeasi latime.
+   * "mediu" aduce Pizza / Manele (100 cm) la 2000; Garden Of Teilor ar cere ~1.7.
+   */
+  logoComplexity: {
+    simplu: 1.0,
+    mediu: 1.15,
+    detaliat: 1.5,
   } as Record<LogoComplexity, number>,
 
   delivery: { bucuresti: 0, tara: 200 } as Record<Delivery, number>,
@@ -91,11 +98,11 @@ export const PRICING = {
   consultThresholds: { widthCm: 250, letters: 40 },
 } as const;
 
-/** Proiectele reale pe care e calibrat modelul. Sursa: pricing-calibration.json */
+/** Proiecte vechi din portofoliu, pastrate ca referinta (nu intra in fit). Sursa: pricing-calibration.json */
 export const CALIBRATION_SET = [
   { name: "Scandal", price: 1000, widthCm: 60, text: "Scandal", category: "afacere" },
   { name: "On Air", price: 600, widthCm: 40, text: "On Air", category: "afacere" },
-  { name: "Pizza Al Taglio", price: 2000, widthCm: 130, text: "Pizza Al Taglio", category: "afacere" },
+  { name: "Pizza Al Taglio", price: 2000, widthCm: 100, text: "Pizza Al Taglio", category: "afacere" },
   { name: "Manele Mentolate", price: 2000, widthCm: 100, text: "Manele Mentolate", category: "afacere" },
   { name: "Love People", price: 1600, widthCm: 80, text: "Love People", category: "personal" },
 ] as const;
@@ -183,8 +190,9 @@ export function estimate(input: EstimateInput): Estimate | null {
       Math.max(logoWidthCm, PRICING.logoWidthRange.min),
       PRICING.logoWidthRange.max
     );
-    const rate = PRICING.logoRatePerCm[logoComplexity];
-    base = widthCm * rate;
+    base =
+      (PRICING.fixedFee + widthCm * PRICING.ratePerCm) *
+      PRICING.logoComplexity[logoComplexity];
     breakdown.push(
       { label: "Lățime", value: `${widthCm} cm` },
       { label: "Design", value: COMPLEXITY_LABEL[logoComplexity] },
@@ -192,13 +200,13 @@ export function estimate(input: EstimateInput): Estimate | null {
   } else {
     if (letters === 0) return null;
     widthCm = Math.round(countWidthUnits(text) * sizeDef.cmPerUnit);
-    base = letters * PRICING.ratePerLetter * sizeDef.multiplier;
+    // Double stroke doubles the tube, not the transformer or the acrylic.
+    base = PRICING.fixedFee + widthCm * PRICING.ratePerCm * PRICING.strokes[stroke];
     breakdown.push(
       { label: "Litere", value: `${letters}` },
       { label: "Mărime", value: `${sizeDef.label} (~${widthCm} cm lățime)` },
     );
 
-    base *= PRICING.strokes[stroke];
     breakdown.push({
       label: "Neon",
       value: stroke === "double" ? "Contur dublu" : "Bandă simplă",
