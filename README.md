@@ -51,15 +51,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 ### Alternative Deployment Options
 
-#### Netlify
-
-1. Push your code to a Git repository
-2. Import the project in Netlify
-3. Use the following build settings:
-   - Build command: `npm run build`
-   - Publish directory: `.next`
-   - Make sure to install the Next.js plugin
-
 #### AWS Amplify
 
 1. Connect your repository to AWS Amplify

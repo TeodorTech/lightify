@@ -96,7 +96,7 @@ export default function PriceEstimator() {
     if (!next) return;
     setCalculated(config);
     // Fire and forget -- reporting must never delay or break the price reveal.
-    void reportCalculation(config, next);
+    void reportCalculation(config);
   };
 
   /** Live width per size option, so the labels describe THIS text. */
